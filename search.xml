@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Webpack Tips (1)</title>
+      <link href="post/webpack-tips-1/"/>
+      <url>post/webpack-tips-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当前项目需要storybook显示画面</li><li>微调配置的时候发现webpack好薄弱啊</li><li>我是个task驱动型选手</li></ul><h2 id="学习途径"><a href="#学习途径" class="headerlink" title="学习途径"></a>学习途径</h2><ul><li>极客时间 视频课程<a href="https://time.geekbang.org/course/intro/100028901">玩转webpack</a></li><li>gitchat</li><li>掘金</li></ul><h2 id="address"><a href="#address" class="headerlink" title="address"></a>address</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_demo">github</a></li></ul><h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ul><li>自动格式化</li><li>自动清除dist<ol><li>通过插件 clean-webpack-plugin <span class="github-emoji"><span>✨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li><li>rm -rf ./dist &amp;&amp; webpack</li></ol></li><li>webpack打包 <code>yarn run build</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How To Use IconFont Icon</title>
+      <link href="post/how-to-use-iconfont-icon/"/>
+      <url>post/how-to-use-iconfont-icon/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>ant design <a href="https://ant.design/components/icon-cn/">icon</a>无法满足日益增长的icon需求</li><li>svg 图标跟原生的 antd组件适配性不好</li></ul><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul><li>使用iconfont提供的Symbol方法使用icon，管理icon，制作icon（有后两个需求，但是目前不是很迫切）</li></ul><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><ul><li>‘Talk is cheap. Show me the code. ‘</li><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/react_icon">github</a></li></ul><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><ul><li>demo 只是展示了简单使用，开发的爽感只有实际开发才能体验</li><li>react antd 技术栈使用iconfont提供的Symbol方法真的是一个愉快的开发体验</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+            <tag> React </tag>
+            
+            <tag> Icon </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AWS Tips &#39;Upload File&#39;</title>
+      <link href="post/aws-tips-upload-file/"/>
+      <url>post/aws-tips-upload-file/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>需要往AWS上传文件</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol><li>home 下新建文件夹 upload <code>mkdir upload</code></li><li>调整权限 <code>chmod 0777 upload</code></li><li>密钥对所在文件夹上传文件 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> -i <span class="token string">"aws.pem"</span> initNodejs.sh ec2-user@18.183.14.245:/home/upload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2></li></ol><ul><li>这个ip是自动生产的，貌似还能配弹性ip</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AWS Tips &#39;Set Root Passsword&#39;</title>
+      <link href="post/aws-tips-set-root-passsword/"/>
+      <url>post/aws-tips-set-root-passsword/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>通过 <code>*.pem</code> 登录aws ec2的时候，默认的不是root用户</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>为root用户创建密码<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">passwd</span> root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2></li><li>有了root就能想干嘛干嘛了</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Hook &#39;useMemo&#39;</title>
+      <link href="post/react-hook-usememo/"/>
+      <url>post/react-hook-usememo/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>第不知道几次看文档，应该更细致才能有收获</li></ul><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul><li>用useMemo优化代码加深理解</li></ul><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/react_hook_usememo">github</a></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#usememo">文档</a></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>我怀疑自己有强迫症，但是没有证据。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VScode RegExp Tips &#39;Color&#39;</title>
+      <link href="post/vscode-regexp-tips-color/"/>
+      <url>post/vscode-regexp-tips-color/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>需要把代码中硬编码的颜色统一替换掉</li></ul><h2 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h2><ul><li><code>#[0-9a-fA-F]{6}</code></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>当你在vscode搜索中发现常规正则不好用的时候，就该找找vscode是不是有自己的正则写法。</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://docs.microsoft.com/zh-cn/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019">文档</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VScode </tag>
+            
+            <tag> RegExp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git Tips &#39;git bisect&#39;</title>
+      <link href="post/git-tips-git-bisect/"/>
+      <url>post/git-tips-git-bisect/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>项目进行到一定程度，突然发现一个错误，而且这个错误还是在之前的某个提交产生的</li><li>项目leader向我推荐了 “git bisect”指令。。。</li><li>学名叫 “二分法找bug” – 沃・孜基・索得</li></ul><h2 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h2><ol><li>找一个肯定没问题的提交 <code>start</code></li><li>找一个出问题的提交 <code>end</code></li><li><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> bisect start <span class="token punctuation">[</span>end<span class="token punctuation">]</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>标记正常提交<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> bisect good<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>标记错误提交<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> bisect bad<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>重复 4 5 找到问题提交，预计会出现<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>问题提交<span class="token punctuation">]</span> is the first bad commit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>退出查找<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> bisect reset<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2></li></ol><ul><li>你永远不知道会遇到那些神奇的问题</li><li>不要担心，这些坑前人已经踩过了，而且留下了解决方案</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Base DnD</title>
+      <link href="post/react-base-dnd/"/>
+      <url>post/react-base-dnd/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>项目中需要用到拖拽，package.json里已经有好几个插件了</li><li>在调包前想原生的实现一下拖拽</li></ul><h2 id="技术要点"><a href="#技术要点" class="headerlink" title="技术要点"></a>技术要点</h2><ul><li>监听React鼠标事件</li><li>判断拖放开始结束</li><li>实现元素位置移动</li><li>维护拖放状态</li></ul><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><ul><li>‘Talk is cheap. Show me the code. ‘</li><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/react_base_dnd">github</a></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li>极客时间 <a href="https://time.geekbang.org/course/detail/100009301-13596">React中拖放的实现</a></li></ul><h2 id="相关课题"><a href="#相关课题" class="headerlink" title="相关课题"></a>相关课题</h2><ul><li>react函数节流防抖</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git Push With SSH</title>
+      <link href="post/git-push-with-ssh/"/>
+      <url>post/git-push-with-ssh/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>有个需求是通过ssh连接github，必须是ssh</li></ul><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p>生成公私密钥（一路回车）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -b <span class="token number">4096</span> -C <span class="token string">"superstarzsw@gamil.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>读取公钥</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">~/.ssh<span class="token function">cat</span> id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>复制到<a href="https://github.com/settings/keys">github</a></p></li><li><p>测试连接</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">文档</a></li></ul><h2 id="本地信息"><a href="#本地信息" class="headerlink" title="本地信息"></a>本地信息</h2><ul><li>macOS</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SSH </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typescript Tips (2)</title>
+      <link href="post/typescript-tips-2/"/>
+      <url>post/typescript-tips-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景（需求）"><a href="#背景（需求）" class="headerlink" title="背景（需求）"></a>背景（需求）</h2><ul><li>随着业务的复杂，简单命名感觉不够用了<ul><li>举个简单的例子: 都是table，为什么你可以叫<code>MemberTable</code>，我就得叫<code>***---...table</code></li></ul></li><li>命名不够用还有个副作用就是接口的名字也更难起了</li></ul><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul><li>虽然我们接口名字一样，但是从不同的文件引入应该不会有问题的吧？？？</li><li>那就要给接口加注释了。<strong>谁的接口，从哪来，想干嘛</strong>。。。</li></ul><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul><li>接口的注释，类型的注释最好用 <code>/**  */</code>的形式。</li><li>效果图<br><img src="ts-tips-2-img.png"></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>TypeScript真香。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tpyescript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Use 「英语轻松读」To Learn English</title>
+      <link href="post/use-ying-yu-qing-song-du-to-learn-english/"/>
+      <url>post/use-ying-yu-qing-song-du-to-learn-english/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>打开手机的 chrome 浏览器会给你推送一些文章</li><li>我看到一篇文章感觉有点意思，想先收藏一下以后看（看不看的以后再说）<ul><li><a href="https://www.freecodecamp.org/news/react-projects-you-should-build-this-year/">7 React Projects You Should Build in 2021</a> 这个标题对我来说就很有吸引力</li></ul></li></ul><p><img src="IMG_7742.PNG"></p><h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><ul><li>本来我是会通过微信发给自己的，然后今天想看看还有啥比文件传输助手更能督促自己学习的软件<ul><li>实不相瞒我在文件传输助手里存了好多学习资料了</li></ul></li><li>往下翻就发现了「英语轻松读」，一瞬间有点诧异，你这么牛逼么？出现啥网盘，啥keep的不奇怪，「英语轻松读」怎么会出现在这个位置。<br><img src="IMG_7744.PNG"></li><li>简直是发现了一个宝藏啊，下面两张图是使用前后的对比。<br><img src="IMG_7743.PNG"><br><img src="IMG_7745.PNG"></li><li>瞬间治好了（起码对这篇文章来讲）我把东西收藏后不看（存了等于看了）的坏毛病。</li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>除了用来学英语，还能用来读文章，特别是对我这种英语战五渣来讲。</li><li>这下阻挡我成为技术大神的最后一道门槛已经消失了。🎉🎉🎉</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 英语轻松读 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Tips &#39;...props&#39;</title>
+      <link href="post/react-tips-props/"/>
+      <url>post/react-tips-props/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>看文档，特别是看第三方组件的文件，有很多都是什么什么透传</li><li>虽然知道怎么用，但是还是一脸蒙蔽，只能先跳过</li></ul><h2 id="透传"><a href="#透传" class="headerlink" title="透传"></a>透传</h2><ul><li>高阶组件收到父组件传来的props，从中拿到自己需要的props，再通过展开把剩下的props传给子组件</li><li><a href="https://zh-hans.reactjs.org/docs/higher-order-components.html#convention-pass-unrelated-props-through-to-wrapped-component">官方介绍</a></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>暴露了自己是个菜鸡的事实，hhhhhh</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Customize Hexo Background</title>
+      <link href="post/customize-hexo-background/"/>
+      <url>post/customize-hexo-background/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>怎么说也是做前端的，这么丑的界面有点受不了了</li><li>放松一下，对blog进行美化</li></ul><h2 id="踩坑步骤"><a href="#踩坑步骤" class="headerlink" title="踩坑步骤"></a>踩坑步骤</h2><ul><li>关闭图片</li><li>关闭动态背景</li><li>安装 <a href="https://github.com/ccloveak/canvas-nest.js/blob/master/README-zh.md">canvas-nest</a></li><li>拷贝 <code>node_modules/canvas-nest.js/dist/canvas-nest.js</code>。。。</li><li>然后发现貌似主题内置了 canvas-nest。。。hhhhh尴尬了</li><li>在主题设置里调一下canvas-nest的配置</li><li>具体操作细节在这次的commit里</li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>朴素风</li><li>偶尔弄弄hexo还是有点意思的嘛</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typescript Tips (1)</title>
+      <link href="post/typescript-tips-1/"/>
+      <url>post/typescript-tips-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>工作中使用 typescript 感觉有欠缺的地方</li><li>重新过一遍 typescript 官方文档，希望能有收获</li></ul><h2 id="基础类型"><a href="#基础类型" class="headerlink" title="基础类型"></a>基础类型</h2><ol><li><code>boolean</code></li></ol><ul><li>简单的 true/false 值</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let isDone: boolean = false;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li><code>number</code></li></ol><ul><li>支持十进制,十六进制,二进制,八进制字面量</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let decLiteral: number = 6;             //十进制let hexLiteral: number = 0xf00d;        //十六进制let binaryLiteral: number = 0b1010;     //二进制let octalLiteral: number = 0o744;       //八进制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ol start="3"><li><code>string</code></li></ol><ul><li>模版字符串</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let name: string = `Gene`;let age: number = 37;let sentence: string = `Hello, my name is ${ name }.I'll be ${ age + 1 } years old next month.`;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ol start="4"><li>数组 Array</li></ol><ul><li>在元素类型后面接上 []，表示由此类型元素组成的一个数组</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let list: number[] = [1, 2, 3];<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用数组泛型，Array&lt;元素类型&gt;</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let list: Array&lt;number&gt; = [1, 2, 3];<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="5"><li>元组 Tuple</li></ol><ul><li>元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">// Declare a tuple typelet x: [string, number];// Initialize itx = ['hello', 10]; // OK// Initialize it incorrectlyx = [10, 'hello']; // Errorconsole.log(x[0].substr(1)); // OKconsole.log(x[1].substr(1)); // Error, 'number' does not have 'substr'x[3] = 'world'; // OK, 字符串可以赋值给(string | number)类型console.log(x[5].toString()); // OK, 'string' 和 'number' 都有 toStringx[6] = true; // Error, 布尔不是(string | number)类型// 这部分无法归纳总结，官网示例很详细了。。。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="6"><li><code>enum</code></li></ol><ul><li>使用枚举类型可以为一组数值赋予友好的名字</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">enum Color {Red, Green, Blue}let c: Color = Color.Green;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">enum Color {Red = 1, Green = 2, Blue = 4}let c: Color = Color.Green;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">enum Color {Red = 1, Green, Blue}let colorName: string = Color[2];console.log(colorName);  // 显示'Green'因为上面代码里它的值是2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ol start="7"><li><code>any</code></li></ol><ul><li>为在<strong>编程阶段</strong>还不清楚类型的变量指定一个类型</li><li>所以在请求合并前，不该有 any 类型存在</li></ul><ol start="8"><li><code>void</code></li></ol><ul><li>一个函数没有返回值时，其返回值类型是 <code>void</code></li><li>不要傻乎乎的去声明一个变量为 <code>void</code> 类型</li></ul><ol start="9"><li><code>null</code> 和 <code>undefined</code></li></ol><ul><li>默认情况下<code>null</code>和<code>undefined</code>是所有类型的子类型</li><li>尽可能地使用 <code>--strictNullChecks</code></li><li>官网这里尽可能的想说明白，但是确实有点复杂。。。</li><li>留个印象，期待在看最佳实践的时候会恍然大悟。</li></ul><ol start="10"><li><code>never</code></li></ol><ul><li><code>never</code>类型表示的是那些永不存在的值的类型。</li><li>留个印象，期待在看最佳实践的时候会恍然大悟。</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">// 返回never的函数必须存在无法达到的终点function error(message: string): never {    throw new Error(message);}// 推断的返回值类型为neverfunction fail() {    return error("Something failed");}// 返回never的函数必须存在无法达到的终点function infiniteLoop(): never {    while (true) {    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="11"><li><code>object</code></li></ol><ul><li><code>object</code>表示非原始类型</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">declare function create(o: object | null): void;create({ prop: 0 }); // OKcreate(null); // OKcreate(42); // Errorcreate("string"); // Errorcreate(false); // Errorcreate(undefined); // Error<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h2><ul><li>通过<em>类型断言</em>这种方式可以告诉编译器，“相信我，我能行，我知道自己在干什么”。</li><li>没有运行时的影响，只是在编译阶段起作用。 TypeScript 会假设你已经进行了必须的检查</li></ul><ol><li>“尖括号”语法</li></ol><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let someValue: any = "this is a string";let strLength: number = (&lt;string&gt;someValue).length;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ol start="2"><li><code>as</code>语法</li></ol><ul><li>在 TypeScript 里使用 JSX 时，只有 <code>as</code>语法断言是被允许的</li></ul><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">let someValue: any = "this is a string";let strLength: number = (someValue as string).length;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://www.tslang.cn/docs/handbook/basic-types.html">文档</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tpyescript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Basic Linux Commands (1)</title>
+      <link href="post/basic-linux-commands-1/"/>
+      <url>post/basic-linux-commands-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>前端开发者补充点Linux知识还是很有必要的</li><li>自己的小小小项目需要部署在树莓派或者aws（虽然只是停留在立案阶段）</li></ul><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h2><ol><li><code>cat</code></li></ol><ul><li>输出整个文件的内容（适用于查看小文件）<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><ol start="2"><li><code>more</code></li></ol><ul><li>以分页的方式来显示内容，左下角显示百分比<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">more</span> 文件名            <span class="token comment"># 基本用法     </span><span class="token function">ls</span> -alh  /bin <span class="token operator">|</span> <span class="token function">more</span>  <span class="token comment"># 分屏显示 bin 目录下内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul><ol start="3"><li><code>less</code></li></ol><ul><li>随意浏览文件，通过光标上下键查看所需内容<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">less</span> 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><ol start="4"><li><code>head</code></li></ol><ul><li>显示文件开头某个数量的内容 (默认前 10 行)<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">head</span>     <span class="token comment">#显示前 10 条进程</span><span class="token function">head</span> 文件名        <span class="token comment">#默认前 10 行</span><span class="token function">head</span> -n 文件名     <span class="token comment">#显示文件前 n 行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul><ol start="5"><li><code>tail</code></li></ol><ul><li>显示文件末尾某个数量的内容 (默认后 10 行)<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tail</span> 文件名          <span class="token comment">#默认显示文件后 10 行</span><span class="token function">tail</span> -100 文件名     <span class="token comment">#显示后 100 行</span><span class="token function">tail</span> -f <span class="token number">100</span> 文件名   <span class="token comment">#循环读取新内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul><ol start="6"><li><code>grep</code></li></ol><ul><li>文本过滤，用于查找文件里符合条件的字符串<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> 关键字 文件名        <span class="token comment">#搜索文件里关键字</span><span class="token function">grep</span> -v 关键字 文件名     <span class="token comment">#排除关键字内容显示</span><span class="token function">grep</span> hexo package.json  <span class="token comment">#查找 package.json 文件中的 hexo 关键字内容</span><span class="token comment">#据说egrep更好用</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ul><ol start="7"><li><code>wc</code></li></ol><ul><li>文本统计，用于计算字数。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wc</span> 文件名          <span class="token comment">#统计文件字节数、字数、行数</span><span class="token function">wc</span> -l 文件名       <span class="token comment">#只统计文件行数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul><ol start="8"><li><code>sed</code></li></ol><ul><li>利用 script 处理文本内容，可以对文件内容进行替换、删除空白行等正则功能<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sed</span> <span class="token string">'s/yangyi/shengwei'</span> test.txt    <span class="token comment">#替换文件中 yangyi 为 shengwei</span><span class="token function">sed</span> 2g test.txt                     <span class="token comment">#删除文件第二行</span><span class="token function">sed</span> <span class="token string">'/^$/d'</span> test.txt                <span class="token comment">#删除空白行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul><ol start="9"><li><code>uniq</code></li></ol><ul><li>删除文本重复行，用于检测和删除文本文件中重复出现的行列<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">uniq</span> test.txt       <span class="token comment">#删除重复的行</span><span class="token function">uniq</span> -c test.txt    <span class="token comment">#统计重复的行</span><span class="token function">uniq</span> -d test.txt    <span class="token comment">#只显示重复的行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul><ol start="10"><li><code>AWK</code></li></ol><ul><li>这个命令有点复杂，所以我会把<code>Linux基本命令</code>改成 <code>Linux基本命令（1）。。。</code></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>先初步学一下，预计折腾树莓派或者aws的时候会轻松不少。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git Tips &#39;no-verify&#39;</title>
+      <link href="post/git-tips-no-verify/"/>
+      <url>post/git-tips-no-verify/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>开发阶段，需要绕过严格的代码检查</li></ul><h2 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h2><ul><li><code>git commit --no-verify -m"这里是对提交的描述" </code></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>正式提交跟非正式提交之间的尺寸需要自己控制。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git Tips &#39;git stash&#39;</title>
+      <link href="post/git-tips-git-stash/"/>
+      <url>post/git-tips-git-stash/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>开始review代码，需要频繁切分支</li><li>当前的变更不想提交</li></ul><h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ol><li><code>git stash</code></li><li><code>git checkout 其他分支</code></li><li>做一些事情 <code>yarn storybook</code> , <code>yarn test</code> 等等</li><li><code>git checkout 之前工作分支</code></li><li><code>git stash pop</code></li></ol><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>git真是啥功能都有 🎉</li><li>‘git stash’ 还有其他魔法操作，不过对我目前来说，现在这样够用了。<ul><li>我堕落了，我丧失了求知欲。。。</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Create Mock Data</title>
+      <link href="post/create-mock-data/"/>
+      <url>post/create-mock-data/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>之前的开发都是在现成 api 的基础上的（可以通过 api 取数据）</li><li>现在暂时没有现成的 api，光等后端同学先提供 api 也不现实</li><li>storybook 展示页面也需要假数据</li></ul><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul><li>自己动手，丰衣足食。自己做假数据应该是最优解了。</li><li>利用 JS 中的 for 循环制作假数据</li></ul><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">const members = [];for (let i = 0; i &lt; 20; i++) {    members[i] = {        id: i,        name: '大郎 吃了 '+ (i + 1).toString()+ ' 颗💊',        mail: (i &lt; 10 ? 'example' : 'test') + '@example.com',    };}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> api </tag>
+            
+            <tag> storybook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Download Antd Pro Blocks</title>
+      <link href="post/download-pro-antd-demo/"/>
+      <url>post/download-pro-antd-demo/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>想查看<a href="https://preview.pro.ant.design/dashboard/analysis">预览</a>的源代码</li><li>从仓库 clone 下来的是一个最基本的架子</li></ul><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol><li>下载 Ant Design Pro <code>git clone git@github.com:ant-design/ant-design-pro.git</code></li><li><code>yarn install</code></li><li><code>npm run fetch:blocks</code><br><img src="pro-blocks.png"></li></ol><h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul><li>项目确实有点大(不过问题不大，主要是来看代码的)</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Antd </tag>
+            
+            <tag> Ant Design Pro </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Configure Backend Development Environment</title>
+      <link href="post/configure-development-environment-backend/"/>
+      <url>post/configure-development-environment-backend/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>仿照前端 配置后端开发环境</li></ul><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul><li><code>cp</code></li></ul><h2 id="基本款"><a href="#基本款" class="headerlink" title="基本款"></a>基本款</h2><ul><li>Nest</li><li>Typescript</li><li>Eslint</li><li>Prettier</li></ul><h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/backend_base_demo">github</a></li></ul><h2 id="感谢🙏"><a href="#感谢🙏" class="headerlink" title="感谢🙏"></a>感谢🙏</h2><ul><li>张雷 （Eslint配置 / Prettier 配置）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nest </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Configure Frontend Development Environment</title>
+      <link href="post/configure-development-environment-frontend/"/>
+      <url>post/configure-development-environment-frontend/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>预计要写很多demo，每次都重新搭建有点痛苦</li></ul><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul><li>搭建个公用的开发环境，需要的时候 <code>cp</code> 一下</li></ul><h2 id="基本款"><a href="#基本款" class="headerlink" title="基本款"></a>基本款</h2><ul><li>antd</li><li>Typescript</li><li>Eslint</li><li>Prettier</li></ul><h2 id="vscode-插件"><a href="#vscode-插件" class="headerlink" title="vscode 插件"></a>vscode 插件</h2><ul><li>Eslint</li><li>Prettier</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://juejin.cn/post/6844903941503729678">掘金</a></li></ul><h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/frontend_base_demo">github</a></li></ul><h2 id="感谢🙏"><a href="#感谢🙏" class="headerlink" title="感谢🙏"></a>感谢🙏</h2><ul><li>张雷 （Eslint配置 / Prettier 配置）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ant design </tag>
+            
+            <tag> react </tag>
+            
+            <tag> Typescript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Test with Puppeteer (1)</title>
+      <link href="post/test-with-puppeteer-1/"/>
+      <url>post/test-with-puppeteer-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当前项目是使用Jest进行测试的</li><li>无法对ui组件进行测试</li><li>无法覆盖到文件的上传下载操作<ul><li>应该也是我对Jest理解不够造成的</li></ul></li></ul><h2 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h2><ul><li>在项目外对项目进行测试</li><li>Node相关的测试方案</li></ul><h2 id="方案选型"><a href="#方案选型" class="headerlink" title="方案选型"></a>方案选型</h2><ul><li><a href="https://zhaoqize.github.io/puppeteer-api-zh_CN/#/">Puppeteer</a><!-- 多语言之后参考文档链接需要换掉--></li></ul><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><ol><li>输入操作&amp;元素点击<ul><li>type</li><li>click</li></ul></li><li>处理元素<ul><li>$eval</li></ul></li><li>处理多个元素<ul><li>$$()</li><li>$$eval()</li></ul></li><li>文件上传<ul><li>uploadFile</li></ul></li><li>iframe操作<ul><li>page.frames()</li></ul></li><li>拖拽验证码<ul><li>mouse</li></ul></li><li>快捷键操作<ul><li>page.keyborder</li></ul></li><li>浏览器tab页<ul><li>browser.waitForTarget</li></ul></li><li>alert窗口<ul><li>dialog</li></ul></li></ol><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://space.bilibili.com/306107070/channel/detail?cid=79090">bilibili</a><ul><li>万能的b站 给我力量</li></ul></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>虽然拿Puppeteer用来做测试，不过貌似改改可以变身爬虫。</li><li>柳暗花明又一村，可以把 Puppeteer整合到Jest中。<a href="https://jestjs.io/docs/en/puppeteer">Jest</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Puppeteer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Work Balance</title>
+      <link href="post/work-balance/"/>
+      <url>post/work-balance/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>昨晚清github仓库有点爆肝了</li><li>将近2个星期没收拾屋子了</li><li>明天红日子，还能休息一天</li></ul><h2 id="清理项目"><a href="#清理项目" class="headerlink" title="清理项目"></a>清理项目</h2><ol><li>厨房<ul><li>灶台</li><li>放了很久的醋，酱油</li><li>煮了可乐生姜</li></ul></li><li>沙发<ul><li>清理长出来的衣服</li><li>用滚筒滚了3遍</li></ul></li><li>书<ul><li>重新整理了一遍</li></ul></li><li>衣服<ul><li>洗了两桶衣服</li></ul></li><li>工作台<ul><li>整理了一下杂物</li></ul></li><li>购物小票<ul><li>拍照存档</li><li>还没打标签（机器学习，自动记账）</li></ul></li><li>冰箱<ul><li>吃了很多存货</li></ul></li></ol><h2 id="耗时"><a href="#耗时" class="headerlink" title="耗时"></a>耗时</h2><ul><li>4小时</li></ul><h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><ul><li>心情舒畅</li><li>清理了2袋垃圾</li></ul><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><ul><li>需要戴着口罩做清洁</li><li>清理了屋子，大大提升了生活品质</li><li>希望下个礼拜6也能收拾屋子，或者礼拜天<ul><li>应该需要重点清洁下卫生间</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 断舍离 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Clean Your Repo</title>
+      <link href="post/clean-your-repo/"/>
+      <url>post/clean-your-repo/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当初少不更事，在github建了很多Repo，感觉自己很努力了</li><li>当前的仓库有很多是fork的。很多是以 <code>Study_</code>开头的，就学了一点点就放下了。</li><li>没有几个完整的项目或者完整的学习历史。</li><li>下面是已经清理了一次的仓库<ul><li><img src="cym_01.png"></li></ul></li><li>第三次清理github仓库<ul><li>效果显著</li><li><img src="cym_02.png"></li></ul></li><li>第四次清理github仓库 🎉<ul><li><img src="cym_03.png"></li></ul></li></ul><h2 id="清理方针"><a href="#清理方针" class="headerlink" title="清理方针"></a>清理方针</h2><ul><li>清理历史的fork<ul><li>回想下fork的目的</li><li>看下fork的项目当前的现状</li><li>把fork换成star</li></ul></li><li>清理不完整的repo<ul><li>重点 <code>Study_ *</code></li><li>合并notes，把笔记整合到blog上</li></ul></li></ul><h2 id="清理感受"><a href="#清理感受" class="headerlink" title="清理感受"></a>清理感受</h2><pre><code>* 有些仓库只是单纯的放在那* 不如转化为自己的知识，再输出到博客上* 我秃了，我强了* 能更清楚得掌握自己在那个时间段的情况</code></pre><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>用github向世界展示一个清晰的积极向上的自己<ul><li>自己的成长</li><li>自己的技能</li><li>自己的项目</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Optimization </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Code-Optimization (2)</title>
+      <link href="post/code-optimization-2/"/>
+      <url>post/code-optimization-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>对代码的优化过程中，有了一点小心得。</li></ul><h2 id="理想的函数"><a href="#理想的函数" class="headerlink" title="理想的函数"></a>理想的函数</h2><ol><li>清晰的定义</li><li>两三个参数</li><li>只做一件事</li></ol><ul><li>优化前<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//函数定义</span><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">setUrl</span> <span class="token operator">=</span> <span class="token punctuation">(</span>    <span class="token parameter">pathname<span class="token operator">:</span> string<span class="token punctuation">,</span>    urlSort<span class="token operator">:</span> string<span class="token punctuation">,</span>    urlKeywords<span class="token operator">:</span> string<span class="token punctuation">,</span>    page<span class="token operator">:</span> number<span class="token punctuation">,</span>    pageSize<span class="token operator">:</span> number<span class="token punctuation">,</span>    keywords<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">,</span>    sort<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">,</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> url<span class="token operator">:</span> string<span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>sort <span class="token operator">&amp;&amp;</span> <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span> <span class="token operator">===</span> urlSort<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// handleChange向けのコード</span>        urlKeywords <span class="token operator">===</span> <span class="token string">'{}'</span>            <span class="token operator">?</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  pathname <span class="token operator">+</span>                  <span class="token string">'?page='</span> <span class="token operator">+</span>                  page <span class="token operator">+</span>                  <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span>                  pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span><span class="token punctuation">)</span>            <span class="token operator">:</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  pathname <span class="token operator">+</span>                  <span class="token string">'?page='</span> <span class="token operator">+</span>                  page <span class="token operator">+</span>                  <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span>                  pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>                  urlKeywords <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>sort <span class="token operator">&amp;&amp;</span> <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span> <span class="token operator">!==</span> urlSort<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">//他のページからソート場合、自動的に１ページへ戻る</span>        urlKeywords <span class="token operator">===</span> <span class="token string">'{}'</span>            <span class="token operator">?</span> <span class="token punctuation">(</span>url <span class="token operator">=</span> pathname <span class="token operator">+</span> <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span> pageSize <span class="token operator">+</span> <span class="token string">'&amp;sort='</span> <span class="token operator">+</span> <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span><span class="token punctuation">)</span>            <span class="token operator">:</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  pathname <span class="token operator">+</span>                  <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span>                  pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>                  urlKeywords <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  <span class="token function">setSortParam</span><span class="token punctuation">(</span>sort<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>sort <span class="token operator">&amp;&amp;</span> keywords<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// handleSearch向けのコード</span>        <span class="token comment">// 他のページから検索場合、自動的に１ページへ戻りたいのため、pageは１に設定</span>        url <span class="token operator">=</span>            pathname <span class="token operator">+</span>            <span class="token string">'?page='</span> <span class="token operator">+</span>            page <span class="token operator">+</span>            <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span>            pageSize <span class="token operator">+</span>            <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>            keywords <span class="token operator">+</span>            <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>            urlSort<span class="token punctuation">;</span>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        url <span class="token operator">=</span> pathname <span class="token operator">+</span> <span class="token string">'?page='</span> <span class="token operator">+</span> page <span class="token operator">+</span> <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span> pageSize <span class="token operator">+</span>        <span class="token string">'&amp;sort='</span> <span class="token operator">+</span> urlSort<span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> url<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">//函数调用</span><span class="token comment">//handleChange</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>    <span class="token function">setUrl</span><span class="token punctuation">(</span>        location<span class="token punctuation">.</span>pathname<span class="token punctuation">,</span>        urlSort<span class="token punctuation">,</span>        filter<span class="token punctuation">,</span>        page<span class="token punctuation">,</span>        pageSize<span class="token punctuation">,</span>        <span class="token string">'{}'</span><span class="token punctuation">,</span>        sortParam<span class="token punctuation">,</span>    <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//handleSearch</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>    <span class="token function">setUrl</span><span class="token punctuation">(</span>        location<span class="token punctuation">.</span>pathname<span class="token punctuation">,</span>        urlSort<span class="token punctuation">,</span>        urlKeywords<span class="token punctuation">,</span>        <span class="token number">1</span><span class="token punctuation">,</span>        pageSize<span class="token punctuation">,</span>        <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>keywordsObj<span class="token punctuation">)</span><span class="token punctuation">,</span>    <span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>优化后<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">//函数定义</span><span class="token keyword">type</span> <span class="token class-name">HandleChangeOptions</span> <span class="token operator">=</span> <span class="token punctuation">{</span>    pathname<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    page<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>    pageSize<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>    urlFilters<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    oldSort<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    newSort<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">type</span> <span class="token class-name">HandleSearchOptions</span> <span class="token operator">=</span> <span class="token punctuation">{</span>    pathname<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    pageSize<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>    filters<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    sort<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">setHandleChangeUrl</span> <span class="token operator">=</span> <span class="token punctuation">(</span>args<span class="token operator">:</span> HandleChangeOptions<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>newSort <span class="token operator">&amp;&amp;</span> <span class="token function">setSortParam</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>newSort<span class="token punctuation">)</span> <span class="token operator">===</span> args<span class="token punctuation">.</span>oldSort<span class="token punctuation">)</span> <span class="token punctuation">{</span>        args<span class="token punctuation">.</span>urlFilters <span class="token operator">===</span> <span class="token string">'{}'</span>            <span class="token operator">?</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  args<span class="token punctuation">.</span>pathname <span class="token operator">+</span>                  <span class="token string">'?page='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>page <span class="token operator">+</span>                  <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>oldSort<span class="token punctuation">)</span>            <span class="token operator">:</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  args<span class="token punctuation">.</span>pathname <span class="token operator">+</span>                  <span class="token string">'?page='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>page <span class="token operator">+</span>                  <span class="token string">'&amp;pagesize='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>urlFilters <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>oldSort<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>        args<span class="token punctuation">.</span>urlFilters <span class="token operator">===</span> <span class="token string">'{}'</span>            <span class="token operator">?</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  args<span class="token punctuation">.</span>pathname <span class="token operator">+</span>                  <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  <span class="token function">setSortParam</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>newSort<span class="token punctuation">)</span><span class="token punctuation">)</span>            <span class="token operator">:</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>                  args<span class="token punctuation">.</span>pathname <span class="token operator">+</span>                  <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span>                  <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>                  args<span class="token punctuation">.</span>urlFilters <span class="token operator">+</span>                  <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>                  <span class="token function">setSortParam</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>newSort<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> url<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">setHandleSearchUrl</span> <span class="token operator">=</span> <span class="token punctuation">(</span>args<span class="token operator">:</span> HandleSearchOptions<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>    <span class="token keyword">const</span> filterObj <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>filters<span class="token punctuation">)</span><span class="token punctuation">;</span>    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>filterObj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>filterObj<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token keyword">delete</span> filterObj<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>filterObj<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> filterObj<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'all'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">delete</span> filterObj<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>filterObj<span class="token punctuation">[</span><span class="token string">'roleId'</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> filterObj<span class="token punctuation">[</span><span class="token string">'roleId'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'all'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">delete</span> filterObj<span class="token punctuation">[</span><span class="token string">'roleId'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">const</span> filterStr <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>filterObj<span class="token punctuation">)</span><span class="token punctuation">;</span>    filterStr <span class="token operator">===</span> <span class="token string">'{}'</span>        <span class="token operator">?</span> <span class="token punctuation">(</span>url <span class="token operator">=</span> args<span class="token punctuation">.</span>pathname <span class="token operator">+</span> <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span> args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span> <span class="token string">'&amp;sort='</span> <span class="token operator">+</span> args<span class="token punctuation">.</span>sort<span class="token punctuation">)</span>        <span class="token operator">:</span> <span class="token punctuation">(</span>url <span class="token operator">=</span>              args<span class="token punctuation">.</span>pathname <span class="token operator">+</span>              <span class="token string">'?page=1&amp;pagesize='</span> <span class="token operator">+</span>              args<span class="token punctuation">.</span>pageSize <span class="token operator">+</span>              <span class="token string">'&amp;filter='</span> <span class="token operator">+</span>              filterStr <span class="token operator">+</span>              <span class="token string">'&amp;sort='</span> <span class="token operator">+</span>              args<span class="token punctuation">.</span>sort<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> url<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">//函数调用</span><span class="token comment">//handleChange</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>    <span class="token function">setHandleChangeUrl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>        pathname<span class="token operator">:</span> location<span class="token punctuation">.</span>pathname<span class="token punctuation">,</span>        page<span class="token operator">:</span> page<span class="token punctuation">,</span>        pageSize<span class="token operator">:</span> pageSize<span class="token punctuation">,</span>        urlFilters<span class="token operator">:</span> filter<span class="token punctuation">,</span>        oldSort<span class="token operator">:</span> urlSort<span class="token punctuation">,</span>        newSort<span class="token operator">:</span> sort<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//handleSearch</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>    <span class="token function">setHandleSearchUrl</span><span class="token punctuation">(</span><span class="token punctuation">{</span>        pathname<span class="token operator">:</span> location<span class="token punctuation">.</span>pathname<span class="token punctuation">,</span>        pageSize<span class="token operator">:</span> urlPageSize<span class="token punctuation">,</span>        filters<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>filtersObj<span class="token punctuation">)</span><span class="token punctuation">,</span>        sort<span class="token operator">:</span> urlSort<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2></li><li>一开始的代码不够优雅很正常，先把功能实现了再通过层层迭代，逐渐优化</li><li>限于当时的认知写出了低质量的代码，视野开阔之后及时对代码进行重构</li><li>优化预定，虽然目前还不知方向在哪，有种在一亩三分地上疯狂耕耘的感觉</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Optimization </tag>
+            
+            <tag> ES6 </tag>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Code Optimization (1)</title>
+      <link href="post/code-optimization-1/"/>
+      <url>post/code-optimization-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>随着阅历（阅读代码经历）的增加，越来越觉得自己写得代码很垃圾。。。</li><li>计划对当前项目的代码做小范围的重构优化。</li></ul><h2 id="理想的命名"><a href="#理想的命名" class="headerlink" title="理想的命名"></a>理想的命名</h2><ol><li><p>有意义的可读的变量名</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> currentDate <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"YYYY/MM/DD"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> currentPage <span class="token operator">=</span> pagination<span class="token punctuation">[</span><span class="token string">'current'</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>可搜索的变量名（不要为了炫技手动缩短变量名）</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">setTimeout</span><span class="token punctuation">(</span>restart<span class="token punctuation">,</span> <span class="token number">86400000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// これはダメ。</span><span class="token comment">//声名为都是大写的常量</span><span class="token keyword">const</span> <span class="token constant">ONE_DAY</span> <span class="token operator">=</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span><span class="token function">setTimeout</span><span class="token punctuation">(</span>restart<span class="token punctuation">,</span> <span class="token constant">ONE_DAY</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>自解释的变量名</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//可以猜出来contentRange是一串字符串</span><span class="token keyword">const</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> pageStart<span class="token punctuation">,</span> pageEnd<span class="token punctuation">,</span> total<span class="token punctuation">]</span> <span class="token operator">=</span> contentRange<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>            <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(\d+)-(\d+)\/(\d+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>        <span class="token punctuation">)</span> <span class="token keyword">as</span> Array<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>合并功能一致的函数</p><ul><li>获取数据的时候可以一次性把数据都给获取了</li><li>不要这个地方要”name”了获取个”name”，那个地方要”id”了再获取个”id”<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">getMemberId</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token comment">//do something</span><span class="token punctuation">}</span><span class="token keyword">const</span> <span class="token function-variable function">getMemberName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token comment">//do something</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">getMemberInfo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token comment">//do something</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul></li><li><p>无重复的语义清晰的变量名</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">MemberTableProp</span> <span class="token punctuation">{</span>    members<span class="token operator">:</span> Member<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    searchMembers<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">filters<span class="token operator">:</span> Store</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    deleteMember<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">member<span class="token operator">:</span> Member</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    exportMembers<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">encoding<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    importMembers<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">formData<span class="token operator">:</span> FormData<span class="token punctuation">,</span> encoding<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    handleChange<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">page<span class="token operator">:</span> number<span class="token punctuation">,</span> pageSize<span class="token operator">:</span> number<span class="token punctuation">,</span> filters<span class="token operator">:</span> string<span class="token punctuation">,</span> sortParam<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">MemberTableProp</span> <span class="token punctuation">{</span>    members<span class="token operator">:</span> Member<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    handleSearch<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">filters<span class="token operator">:</span> Store</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    handleDelete<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">member<span class="token operator">:</span> Member</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    handleExport<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">encoding<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    handleImport<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">formData<span class="token operator">:</span> FormData<span class="token punctuation">,</span> encoding<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>    handleChange<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">page<span class="token operator">:</span> number<span class="token punctuation">,</span> pageSize<span class="token operator">:</span> number<span class="token punctuation">,</span> filters<span class="token operator">:</span> string<span class="token punctuation">,</span> sortParam<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>整体风格统一的变量名</p></li><li><p>使用默认参数</p><ul><li>默认参数比短路逼格更高</li></ul></li><li><p><a href="https://github.com/unbug/codelf">CODELF</a></p></li></ol><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li>随手把注释掉的代码删掉</li><li>现在用不上的代码以后也用不上</li><li>现在的代码肯定不能满足以后的需求</li><li>真的有那么一天需要这段代码了，可以根据文件历史找回代码(git)</li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>写着写着，忽然发现当前代码可优化的地方不是很多，哈哈哈哈哈</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Optimization </tag>
+            
+            <tag> ES6 </tag>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Two Scenarios with &#39;git rebase&#39;</title>
+      <link href="post/two-scenarios-with-git-rebase/"/>
+      <url>post/two-scenarios-with-git-rebase/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>新年上班第一天，本地master分支落后服务器master分支176个提交（我的同事好努力啊 ^_^ ）。<br><img src="img0.png"></li><li>放假前工作有些不够专心，在一个分支上有很多个提交(才没有，平常也是一个分支有很多提交的)。<br><img src="img1.png"></li></ul><h2 id="通过变基清理本地历史"><a href="#通过变基清理本地历史" class="headerlink" title="通过变基清理本地历史"></a>通过变基清理本地历史</h2><ol><li>修改默认的编辑器 （强烈推荐 atom）<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global core.editor <span class="token string">'atom --wait'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>开始变基(从想合并的上一个提交开始)<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> rebase -i ad23981<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>操作前 <img src="img4.png"></li><li>操作后 <img src="img2.png">  </li></ul></li></ol><ul><li>r s p是什么<br><img src="img3.png"></li></ul><ol start="3"><li>第一次变基完成 🎉撒花🎉</li></ol><h2 id="通过变基解决合并冲突"><a href="#通过变基解决合并冲突" class="headerlink" title="通过变基解决合并冲突"></a>通过变基解决合并冲突</h2><ol><li><p>不管3721上来直接:</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch<span class="token function">git</span> pull --rebase origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>解决合并冲突</p></li><li><p>要是已经清理过本地的话不存在步骤3</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> rebase --continue<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>暂存提交</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> add.<span class="token function">git</span> commit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>第二次变基完成 🎉撒花🎉<br><img src="img5.png"></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ToWrite List</title>
+      <link href="post/towrite-list/"/>
+      <url>post/towrite-list/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> メモ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TODO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Start Mongodb with Docker</title>
+      <link href="post/start-mongodb-with-docker/"/>
+      <url>post/start-mongodb-with-docker/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>mongodb改了共享协议，brew把mongodb给删了</li><li>直接安装mongodb需要踩很多坑</li><li>希望把时间花在具体业务上</li></ul><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ol><li>终端<ul><li>敲命令的</li></ul></li><li>docker<ul><li>跑mongodb的</li></ul></li><li>MongoDB Compass<ul><li>看看mongodb有没有跑起来的</li></ul></li></ol><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ol><li>拉取Mongo镜像<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker pull mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>创建MongoDB专用的文件夹<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Documents<span class="token function">mkdir</span> mongodb<span class="token builtin class-name">cd</span> mongodb<span class="token function">mkdir</span> data backup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li>启动MongoDB(两个冒号前面的换成自己的路径)<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run --name mongo -p <span class="token number">27017</span>:27017 -v /Users/zhangshengwei/Documents/mongodb/data:/data/db -v /Users/zhangshengwei/Documents/mongodb/backup:/data/backup -d mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>测试</li></ol><ul><li>用MongoDB Compass测试MongoDB是否正常工作<br><img src="testconnect.png"></li><li>🎉完结撒花🎉<br><img src="connectsuccess.png"></li></ul><h2 id="写作耗时"><a href="#写作耗时" class="headerlink" title="写作耗时"></a>写作耗时</h2><ul><li>1小时</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Mongodb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Login with Github</title>
+      <link href="post/login-with-github/"/>
+      <url>post/login-with-github/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><ul><li>通过第三方进行登入</li></ul><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p><img src="steps.png"></p><h2 id="核心步骤"><a href="#核心步骤" class="headerlink" title="核心步骤"></a>核心步骤</h2><ol><li>获取Code</li><li>用Code换AccessToken</li></ol><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ol><li><p>在 <a href="https://github.com/settings/applications/new">GitHub</a> 上来创建 OAuth App</p><ul><li>Authorization callback URL 需要把login换成ghcallback</li><li>例如  <code>/users/login</code> -&gt; <code>/users/ghcallback</code><br><img src="step1.png"></li></ul></li><li><p>根据github的<a href="https://docs.github.com/en/free-pro-team@latest/developers/apps/authorizing-oauth-apps">OAuth文档</a>拼接请求链接</p><ul><li><p>建议使用encodeURIComponent() 拼接url</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token string">'https://github.com/login/oauth/authorize'</span>     <span class="token operator">+</span> <span class="token string">'?client_id='</span> <span class="token operator">+</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span> 之前获取的id <span class="token punctuation">)</span>     <span class="token operator">+</span> <span class="token string">'&amp;redirect_uri='</span> <span class="token operator">+</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span> 授权成功后返回的地址 <span class="token punctuation">)</span><span class="token punctuation">;</span>         <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li></ul></li><li><p>授权成功后，会在回调的url的查询参数里找到code  🎉撒花🎉</p></li><li><p>通过axios发送post请求获取AccessToken  🎉撒花🎉</p><ul><li>步骤1获取的 <code>Client ID</code> &amp; <code>Client secrets</code> 和步骤3获取的code作为参数向github请求数据<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span>data<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span> <span class="token string">'https://github.com/login/oauth/access_token'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><img src="step2.png"></li></ul></li><li><p>通过AccessToken获取github的用户信息  🎉完结撒花🎉</p><ul><li><p>发送get请求获取用户信息</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span> <span class="token string">'https://api.github.com/user?access_token='</span><span class="token operator">+</span> AccessToken <span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul></li></ol><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://study.163.com/course/courseMain.htm?courseId=1209581854">方糖新全栈·React+Node必修课</a></li><li><a href="https://docs.github.com/en/free-pro-team@latest/developers/apps/authorizing-oauth-apps">github文档</a></li></ul><h2 id="写作耗时"><a href="#写作耗时" class="headerlink" title="写作耗时"></a>写作耗时</h2><ul><li>3小时</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OAuth </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2021计划</title>
+      <link href="post/2021-ji-hua/"/>
+      <url>post/2021-ji-hua/</url>
+      
+        <content type="html"><![CDATA[<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><ul><li>每日日语<ul><li>n1</li><li>it passport</li></ul></li><li>每日英语<ul><li>托业 700</li></ul></li><li>每周一题Leetcode</li></ul><h2 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h2><ul><li>每天减肥<ul><li>晚饭吃拉沙</li><li>65kg</li></ul></li><li>奶茶<ul><li>争取一礼拜一杯</li></ul></li><li>睡眠<ul><li>11点前睡，保证8小时睡眠</li></ul></li></ul><h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><ul><li>Typescript</li><li>React</li><li>ant design</li><li>正则</li><li>优化代码</li></ul><h2 id="睡后收入"><a href="#睡后收入" class="headerlink" title="睡后收入"></a>睡后收入</h2><ul><li>微信小程序<ul><li>酒店预定</li><li>外卖下单</li></ul></li><li>爬虫<ul><li>supreme抽签</li></ul></li><li>比特币<ul><li>自动交易</li></ul></li><li>YouTube发视频</li></ul><h2 id="一人成军"><a href="#一人成军" class="headerlink" title="一人成军"></a>一人成军</h2><ul><li>树莓派<ul><li>Linux</li><li>个人服务器</li><li>个人vpn</li><li>NAS</li><li>个人git库</li></ul></li><li>AWS</li><li>Nest / Express</li></ul><p><img src="happynewyear.jpeg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flag </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

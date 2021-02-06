@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>せいい</title>
+  
+  <subtitle>拥抱生活</subtitle>
+  <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
+  
+  <link href="https://shengwei.innihon.com/"/>
+  <updated>2021-02-06T15:39:29.028Z</updated>
+  <id>https://shengwei.innihon.com/</id>
+  
+  <author>
+    <name>せいい</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Webpack Tips (1)</title>
+    <link href="https://shengwei.innihon.com/post/webpack-tips-1/"/>
+    <id>https://shengwei.innihon.com/post/webpack-tips-1/</id>
+    <published>2021-02-06T13:40:41.000Z</published>
+    <updated>2021-02-06T15:39:29.028Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="webpack" scheme="https://shengwei.innihon.com/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Use IconFont Icon</title>
+    <link href="https://shengwei.innihon.com/post/how-to-use-iconfont-icon/"/>
+    <id>https://shengwei.innihon.com/post/how-to-use-iconfont-icon/</id>
+    <published>2021-02-04T17:15:08.000Z</published>
+    <updated>2021-02-06T11:56:14.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ant design &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+    <category term="Icon" scheme="https://shengwei.innihon.com/tags/Icon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Tips &#39;Upload File&#39;</title>
+    <link href="https://shengwei.innihon.com/post/aws-tips-upload-file/"/>
+    <id>https://shengwei.innihon.com/post/aws-tips-upload-file/</id>
+    <published>2021-02-03T15:33:54.000Z</published>
+    <updated>2021-02-06T11:56:14.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要往AWS上传文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
+    
+    
+    <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AWS Tips &#39;Set Root Passsword&#39;</title>
+    <link href="https://shengwei.innihon.com/post/aws-tips-set-root-passsword/"/>
+    <id>https://shengwei.innihon.com/post/aws-tips-set-root-passsword/</id>
+    <published>2021-02-03T15:27:49.000Z</published>
+    <updated>2021-02-06T11:56:14.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;通过 &lt;code&gt;*.pem&lt;/code&gt; 登录aws ec2的时候，默认的不是root用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
+    
+    
+    <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Hook &#39;useMemo&#39;</title>
+    <link href="https://shengwei.innihon.com/post/react-hook-usememo/"/>
+    <id>https://shengwei.innihon.com/post/react-hook-usememo/</id>
+    <published>2021-01-30T15:20:16.000Z</published>
+    <updated>2021-02-06T11:56:14.874Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;第不知道几次看文档，应该更细致才能有收获&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VScode RegExp Tips &#39;Color&#39;</title>
+    <link href="https://shengwei.innihon.com/post/vscode-regexp-tips-color/"/>
+    <id>https://shengwei.innihon.com/post/vscode-regexp-tips-color/</id>
+    <published>2021-01-30T14:24:21.000Z</published>
+    <updated>2021-02-06T11:56:14.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要把代码中硬编码的颜色统一替换掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;具体代码&quot;&gt;&lt;a href=&quot;#具体代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="VScode" scheme="https://shengwei.innihon.com/tags/VScode/"/>
+    
+    <category term="RegExp" scheme="https://shengwei.innihon.com/tags/RegExp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Tips &#39;git bisect&#39;</title>
+    <link href="https://shengwei.innihon.com/post/git-tips-git-bisect/"/>
+    <id>https://shengwei.innihon.com/post/git-tips-git-bisect/</id>
+    <published>2021-01-28T16:10:53.000Z</published>
+    <updated>2021-02-06T11:56:14.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;项目进行到一定程度，突然发现一个错误，而且这个错误还是在之前的某个提交产生的&lt;/li&gt;
+&lt;li&gt;项目leader向我推荐了</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://shengwei.innihon.com/categories/git/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Base DnD</title>
+    <link href="https://shengwei.innihon.com/post/react-base-dnd/"/>
+    <id>https://shengwei.innihon.com/post/react-base-dnd/</id>
+    <published>2021-01-26T15:13:07.000Z</published>
+    <updated>2021-02-06T11:56:14.874Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Push With SSH</title>
+    <link href="https://shengwei.innihon.com/post/git-push-with-ssh/"/>
+    <id>https://shengwei.innihon.com/post/git-push-with-ssh/</id>
+    <published>2021-01-26T14:04:28.000Z</published>
+    <updated>2021-02-06T11:56:14.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;有个需求是通过ssh连接github，必须是ssh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Github" scheme="https://shengwei.innihon.com/categories/Github/"/>
+    
+    
+    <category term="SSH" scheme="https://shengwei.innihon.com/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typescript Tips (2)</title>
+    <link href="https://shengwei.innihon.com/post/typescript-tips-2/"/>
+    <id>https://shengwei.innihon.com/post/typescript-tips-2/</id>
+    <published>2021-01-26T13:17:55.000Z</published>
+    <updated>2021-02-06T11:56:14.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景（需求）&quot;&gt;&lt;a href=&quot;#背景（需求）&quot; class=&quot;headerlink&quot; title=&quot;背景（需求）&quot;&gt;&lt;/a&gt;背景（需求）&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;随着业务的复杂，简单命名感觉不够用了&lt;ul&gt;
+&lt;li&gt;举个简单的例子:</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="Tpyescript" scheme="https://shengwei.innihon.com/tags/Tpyescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use 「英语轻松读」To Learn English</title>
+    <link href="https://shengwei.innihon.com/post/use-ying-yu-qing-song-du-to-learn-english/"/>
+    <id>https://shengwei.innihon.com/post/use-ying-yu-qing-song-du-to-learn-english/</id>
+    <published>2021-01-23T06:59:54.000Z</published>
+    <updated>2021-02-06T11:56:14.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开手机的 chrome</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://shengwei.innihon.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="英语轻松读" scheme="https://shengwei.innihon.com/tags/%E8%8B%B1%E8%AF%AD%E8%BD%BB%E6%9D%BE%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Tips &#39;...props&#39;</title>
+    <link href="https://shengwei.innihon.com/post/react-tips-props/"/>
+    <id>https://shengwei.innihon.com/post/react-tips-props/</id>
+    <published>2021-01-17T14:35:37.000Z</published>
+    <updated>2021-02-06T11:56:14.874Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Customize Hexo Background</title>
+    <link href="https://shengwei.innihon.com/post/customize-hexo-background/"/>
+    <id>https://shengwei.innihon.com/post/customize-hexo-background/</id>
+    <published>2021-01-17T02:57:35.000Z</published>
+    <updated>2021-02-06T11:56:14.868Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;怎么说也是做前端的，这么丑的界面有点受不了了&lt;/li&gt;
+&lt;li&gt;放松一下，对blog进行美化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="Hexo" scheme="https://shengwei.innihon.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typescript Tips (1)</title>
+    <link href="https://shengwei.innihon.com/post/typescript-tips-1/"/>
+    <id>https://shengwei.innihon.com/post/typescript-tips-1/</id>
+    <published>2021-01-17T01:44:56.000Z</published>
+    <updated>2021-02-06T11:56:14.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;工作中使用 typescript 感觉有欠缺的地方&lt;/li&gt;
+&lt;li&gt;重新过一遍 typescript</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="Tpyescript" scheme="https://shengwei.innihon.com/tags/Tpyescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Linux Commands (1)</title>
+    <link href="https://shengwei.innihon.com/post/basic-linux-commands-1/"/>
+    <id>https://shengwei.innihon.com/post/basic-linux-commands-1/</id>
+    <published>2021-01-16T14:17:35.000Z</published>
+    <updated>2021-02-06T11:56:14.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
+    
+    
+    <category term="Linux" scheme="https://shengwei.innihon.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Tips &#39;no-verify&#39;</title>
+    <link href="https://shengwei.innihon.com/post/git-tips-no-verify/"/>
+    <id>https://shengwei.innihon.com/post/git-tips-no-verify/</id>
+    <published>2021-01-14T14:55:03.000Z</published>
+    <updated>2021-02-06T11:56:14.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;开发阶段，需要绕过严格的代码检查&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;具体代码&quot;&gt;&lt;a href=&quot;#具体代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://shengwei.innihon.com/categories/git/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Tips &#39;git stash&#39;</title>
+    <link href="https://shengwei.innihon.com/post/git-tips-git-stash/"/>
+    <id>https://shengwei.innihon.com/post/git-tips-git-stash/</id>
+    <published>2021-01-14T14:12:28.000Z</published>
+    <updated>2021-02-06T11:56:14.872Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;开始review代码，需要频繁切分支&lt;/li&gt;
+&lt;li&gt;当前的变更不想提交&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://shengwei.innihon.com/categories/git/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create Mock Data</title>
+    <link href="https://shengwei.innihon.com/post/create-mock-data/"/>
+    <id>https://shengwei.innihon.com/post/create-mock-data/</id>
+    <published>2021-01-13T14:59:12.000Z</published>
+    <updated>2021-02-06T11:56:14.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;之前的开发都是在现成 api 的基础上的（可以通过 api 取数据）&lt;/li&gt;
+&lt;li&gt;现在暂时没有现成的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="api" scheme="https://shengwei.innihon.com/tags/api/"/>
+    
+    <category term="storybook" scheme="https://shengwei.innihon.com/tags/storybook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Download Antd Pro Blocks</title>
+    <link href="https://shengwei.innihon.com/post/download-pro-antd-demo/"/>
+    <id>https://shengwei.innihon.com/post/download-pro-antd-demo/</id>
+    <published>2021-01-12T12:50:04.000Z</published>
+    <updated>2021-02-06T11:56:14.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;想查看&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="Antd" scheme="https://shengwei.innihon.com/tags/Antd/"/>
+    
+    <category term="Ant Design Pro" scheme="https://shengwei.innihon.com/tags/Ant-Design-Pro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Configure Backend Development Environment</title>
+    <link href="https://shengwei.innihon.com/post/configure-development-environment-backend/"/>
+    <id>https://shengwei.innihon.com/post/configure-development-environment-backend/</id>
+    <published>2021-01-11T14:24:03.000Z</published>
+    <updated>2021-02-06T11:56:14.867Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;仿照前端 配置后端开发环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
+    
+    
+    <category term="Nest" scheme="https://shengwei.innihon.com/tags/Nest/"/>
+    
+  </entry>
+  
+</feed>

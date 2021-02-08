@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>AWS Tips &#39;ssh config&#39;</title>
+      <link href="post/aws-tips-ssh-config/"/>
+      <url>post/aws-tips-ssh-config/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>人为降低连接aws的复杂的</li><li>之前连接aws <code> ssh -i "aws.pem" ec2-user@ec2-54-178-64-65.ap-northeast-1.compute.amazonaws.com</code></li></ul><h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><ul><li>在 ~/.ssh下创建config<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#  ~/.ssh/config</span>Host aws    HostName 这里是ip或者dns    User ec2-user    Port <span class="token number">22</span>    IdentityFile ~/.ssh/aws.pem    ServerAliveInterval <span class="token number">60</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2></li><li>目前连接aws <code>ssh aws</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Webpack Tips (2)</title>
+      <link href="post/webpack-tips-2/"/>
+      <url>post/webpack-tips-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ol><li><p>entry</p><ul><li>单入口 SPA <span class="github-emoji"><span>🎉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 字符串形式</li><li>多入口 对象 key-value形式</li></ul></li><li><p>output</p><ul><li>filename<ul><li>通过占位符确保文件名称唯一</li><li><code>'[name].js'</code> 这个name是1里多入口的key 单入口文件名是 <code>main.js</code></li></ul></li><li>path</li></ul></li><li><p>loaders</p><ul><li>module -&gt; rules</li><li>test 指定匹配规则</li><li>use 指定使用的loader名称</li></ul></li><li><p>Plugins<br><img src="plugins.png"></p></li><li><p>Mode</p></li><li><p>bable</p><ul><li>支持es6<ul><li><code>@babel/core @babel/preset-env babel-loader</code></li></ul></li><li>支持react<ul><li><code>react react-dom @babel/preset-react</code></li></ul></li></ul></li><li><p>解析css less</p><ul><li><code>style-loader css-loader less-loader</code></li></ul></li><li><p>解析图片</p><ul><li><code>file-loader</code>用于处理图片</li></ul></li><li><p>解析字体</p><ul><li><code>file-loader</code></li></ul></li><li><p>对 89 优化</p><ul><li><code>url-loader</code></li></ul></li><li><p>文件监听</p><ul><li>–watch</li><li>watch:true</li></ul></li><li><p>热更新</p><ul><li>webpack-dev-server</li><li>HotModuleReplacementPlugin</li><li><code>"dev": "webpack serve --mode development --hot-only" </code></li><li> 槽点满满 教程里的webpack版本是3 现在都5了。。改动有点大</li></ul></li><li><p>文件指纹</p><ul><li>hash<ul><li>path.join / path.resolve</li></ul></li><li>chunkhash<ul><li>主要对js</li></ul></li><li>contenthash<ul><li>主要对css</li><li><code>mini-css-extract-plugin</code></li><li>MiniCssExtractPlugin</li><li>图片的文件指纹 <img src="file_hash.png"></li><li>无法在热更新下使用</li></ul></li></ul></li><li><p>html 压缩</p><ul><li>html-webpack-plugin <img src="html_compression.png"></li></ul></li><li><p>css 压缩</p><ul><li>optimize-css-assets-webpack-plugin <img src="css_compression.png"></li></ul></li></ol><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_setting_demo">github</a></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>需要合理利用 stackoverflow github</li><li>不抛弃不放弃</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Webpack Tips (1)</title>
+      <link href="post/webpack-tips-1/"/>
+      <url>post/webpack-tips-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当前项目需要storybook显示画面</li><li>微调配置的时候发现webpack好薄弱啊</li><li>我是个task驱动型选手</li></ul><h2 id="学习途径"><a href="#学习途径" class="headerlink" title="学习途径"></a>学习途径</h2><ul><li>极客时间 视频课程<a href="https://time.geekbang.org/course/intro/100028901">玩转webpack</a><ul><li>强烈不推荐购买 这个视频课程是webpack3的 现在已经webpack5了</li></ul></li><li>gitchat</li><li>掘金</li></ul><h2 id="address"><a href="#address" class="headerlink" title="address"></a>address</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_demo">github</a></li></ul><h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ul><li>自动格式化</li><li>自动清除dist<ol><li>通过插件 clean-webpack-plugin <span class="github-emoji"><span>✨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li><li>rm -rf ./dist &amp;&amp; webpack</li></ol></li><li>webpack打包 <code>yarn run build</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How To Use IconFont Icon</title>
       <link href="post/how-to-use-iconfont-icon/"/>
       <url>post/how-to-use-iconfont-icon/</url>
@@ -362,31 +437,6 @@
     
     
     <entry>
-      <title>Use &#39;clean-webpack-plugin&#39;</title>
-      <link href="post/use-clean-webpack-plugin/"/>
-      <url>post/use-clean-webpack-plugin/</url>
-      
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我也不知道为啥会看这个</li><li>每次构建前需要手动清dist</li></ul><h2 id="包介绍"><a href="#包介绍" class="headerlink" title="包介绍"></a>包介绍</h2><ul><li>默认会删除output指定的输出目录</li></ul><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">const CleanWebpackPlugin = require('clean-webpack-plugin').........module.exports={    plugins:[        new CleanWebpackPlugin()    ]}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Frontend </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> webpack </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Git Tips &#39;no-verify&#39;</title>
       <link href="post/git-tips-no-verify/"/>
       <url>post/git-tips-no-verify/</url>
@@ -707,12 +757,12 @@
       <link href="post/towrite-list/"/>
       <url>post/towrite-list/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人。</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>转化成文字</li><li>转化成视频</li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的组件</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
       
       
       <categories>
           
-          <category> Output </category>
+          <category> メモ </category>
           
       </categories>
       

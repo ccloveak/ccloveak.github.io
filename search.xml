@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>How To Create New Issue</title>
+      <link href="post/how-to-create-new-issue/"/>
+      <url>post/how-to-create-new-issue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>不会用antd的组件。。阅读理解不好，文档看不懂。</li></ul><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><ul><li><a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a></li></ul><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>一个可复现的demo<ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/protable_from_issue">本地demo</a></li><li>codesandbox</li></ul></li></ul><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ol><li>去官方的github仓库提issue</li><li>描述问题，描述需求</li><li>贴代码等待回答</li></ol><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>注意语气，帮你是为爱发电，不帮是本分</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li>new <a href="https://github.com/ant-design/pro-components/issues/1887">issue</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Issue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AWS Tips &#39;ssh config&#39;</title>
       <link href="post/aws-tips-ssh-config/"/>
       <url>post/aws-tips-ssh-config/</url>
@@ -21,6 +46,8 @@
         <tags>
             
             <tag> AWS </tag>
+            
+            <tag> SSH </tag>
             
         </tags>
       
@@ -757,7 +784,7 @@
       <link href="post/towrite-list/"/>
       <url>post/towrite-list/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li><li><a href="./How-To-Create-New-Issue/">github提issue</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
       
       
       <categories>

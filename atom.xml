@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-02-08T10:22:17.818Z</updated>
+  <updated>2021-02-08T18:01:50.216Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>How To Create New Issue</title>
+    <link href="https://shengwei.innihon.com/post/how-to-create-new-issue/"/>
+    <id>https://shengwei.innihon.com/post/how-to-create-new-issue/</id>
+    <published>2021-02-08T16:51:20.000Z</published>
+    <updated>2021-02-08T18:01:50.216Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;不会用antd的组件。。阅读理解不好，文档看不懂。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Github" scheme="https://shengwei.innihon.com/categories/Github/"/>
+    
+    
+    <category term="Issue" scheme="https://shengwei.innihon.com/tags/Issue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AWS Tips &#39;ssh config&#39;</title>
     <link href="https://shengwei.innihon.com/post/aws-tips-ssh-config/"/>
     <id>https://shengwei.innihon.com/post/aws-tips-ssh-config/</id>
     <published>2021-02-07T17:17:54.000Z</published>
-    <updated>2021-02-08T10:22:17.818Z</updated>
+    <updated>2021-02-08T16:52:29.310Z</updated>
     
     
       
@@ -40,6 +68,8 @@
     
     
     <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
+    
+    <category term="SSH" scheme="https://shengwei.innihon.com/tags/SSH/"/>
     
   </entry>
   
@@ -535,35 +565,6 @@
     
     
     <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Create Mock Data</title>
-    <link href="https://shengwei.innihon.com/post/create-mock-data/"/>
-    <id>https://shengwei.innihon.com/post/create-mock-data/</id>
-    <published>2021-01-13T14:59:12.000Z</published>
-    <updated>2021-02-04T17:13:34.493Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;之前的开发都是在现成 api 的基础上的（可以通过 api 取数据）&lt;/li&gt;
-&lt;li&gt;现在暂时没有现成的</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="api" scheme="https://shengwei.innihon.com/tags/api/"/>
-    
-    <category term="storybook" scheme="https://shengwei.innihon.com/tags/storybook/"/>
     
   </entry>
   

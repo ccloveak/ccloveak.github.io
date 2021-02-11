@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Docker Tips &#39;Install Gitlab&#39;</title>
+      <link href="post/docker-tips-install-gitlab/"/>
+      <url>post/docker-tips-install-gitlab/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>使用docker安装gitlab</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> docker run --detach <span class="token punctuation">\</span>  --hostname <span class="token number">18.179</span>.23.91 <span class="token punctuation">\</span>  --publish <span class="token number">443</span>:443 --publish <span class="token number">80</span>:80 --publish <span class="token number">222</span>:22 <span class="token punctuation">\</span>  --name gitlab <span class="token punctuation">\</span>  --restart always <span class="token punctuation">\</span>  --volume /srv/gitlab/config:/etc/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/logs:/var/log/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>  gitlab/gitlab-ce:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>实例配置 2核4G</li><li>aws得编辑出站规则 默认出站规则只有ssh的20端口开放</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AWS Tips &#39;Install Docker&#39;</title>
       <link href="post/aws-tips-install-docker/"/>
       <url>post/aws-tips-install-docker/</url>

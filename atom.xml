@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-02-11T12:05:14.685Z</updated>
+  <updated>2021-02-11T13:20:56.877Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker Tips &#39;Install Gitlab&#39;</title>
+    <link href="https://shengwei.innihon.com/post/docker-tips-install-gitlab/"/>
+    <id>https://shengwei.innihon.com/post/docker-tips-install-gitlab/</id>
+    <published>2021-02-11T12:19:55.000Z</published>
+    <updated>2021-02-11T13:20:56.877Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用docker安装gitlab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="インフラ" scheme="https://shengwei.innihon.com/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/"/>
+    
+    
+    <category term="Docker" scheme="https://shengwei.innihon.com/tags/Docker/"/>
+    
+    <category term="Gitlab" scheme="https://shengwei.innihon.com/tags/Gitlab/"/>
+    
+  </entry>
   
   <entry>
     <title>AWS Tips &#39;Install Docker&#39;</title>
@@ -541,31 +571,6 @@
     
     
     <category term="Tpyescript" scheme="https://shengwei.innihon.com/tags/Tpyescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Basic Linux Commands (1)</title>
-    <link href="https://shengwei.innihon.com/post/basic-linux-commands-1/"/>
-    <id>https://shengwei.innihon.com/post/basic-linux-commands-1/</id>
-    <published>2021-01-16T14:17:35.000Z</published>
-    <updated>2021-02-04T17:13:34.488Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
-    
-    
-    <category term="Linux" scheme="https://shengwei.innihon.com/tags/Linux/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-02-09T16:23:42.409Z</updated>
+  <updated>2021-02-11T12:05:14.685Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWS Tips &#39;Install Docker&#39;</title>
+    <link href="https://shengwei.innihon.com/post/aws-tips-install-docker/"/>
+    <id>https://shengwei.innihon.com/post/aws-tips-install-docker/</id>
+    <published>2021-02-09T17:04:53.000Z</published>
+    <updated>2021-02-11T12:05:14.685Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;装个docker就不用出了问题新建实例了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="インフラ" scheme="https://shengwei.innihon.com/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/"/>
+    
+    
+    <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
+    
+    <category term="docker" scheme="https://shengwei.innihon.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>MomentJs Tips (1)</title>
@@ -536,34 +566,6 @@
     
     
     <category term="Linux" scheme="https://shengwei.innihon.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Tips &#39;no-verify&#39;</title>
-    <link href="https://shengwei.innihon.com/post/git-tips-no-verify/"/>
-    <id>https://shengwei.innihon.com/post/git-tips-no-verify/</id>
-    <published>2021-01-14T14:55:03.000Z</published>
-    <updated>2021-02-04T17:13:34.496Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;开发阶段，需要绕过严格的代码检查&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;具体代码&quot;&gt;&lt;a href=&quot;#具体代码&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="git" scheme="https://shengwei.innihon.com/categories/git/"/>
-    
-    
-    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   

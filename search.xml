@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>AWS Tips &#39;Install Docker&#39;</title>
+      <link href="post/aws-tips-install-docker/"/>
+      <url>post/aws-tips-install-docker/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>装个docker就不用出了问题新建实例了</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol><li>更新实例上已安装的程序包和程序包缓存<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum update -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>安装最新的 Docker Engine 程序包<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> docker<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>启动 Docker 服务<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">service</span> docker start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>将 root 添加到 docker 组<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">usermod</span> -a -G docker root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>解决 <code>WARNING: bridge-nf-call-iptables is disabled</code><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/sysctl.conf<span class="token comment"># sysctl.conf</span>net.bridge.bridge-nf-call-ip6tables <span class="token operator">=</span> <span class="token number">1</span>net.bridge.bridge-nf-call-iptables <span class="token operator">=</span> <span class="token number">1</span>sysctl -p<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="EC2-type"><a href="#EC2-type" class="headerlink" title="EC2 type"></a>EC2 type</h2></li></ol><ul><li>Amazon Linux 2 AMI (HVM), SSD Volume Type </li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://docs.aws.amazon.com/zh_cn/AmazonECS/latest/developerguide/docker-basics.html">aws</a></li><li><a href="https://developer.aliyun.com/article/278801">aliyun</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MomentJs Tips (1)</title>
       <link href="post/momentjs-tips-1/"/>
       <url>post/momentjs-tips-1/</url>

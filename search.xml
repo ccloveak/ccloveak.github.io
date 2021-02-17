@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>LeetCode 696</title>
+      <link href="post/leetcode-696/"/>
+      <url>post/leetcode-696/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><ul><li><p>Give a string s, count the number of non-empty (contiguous) substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</p></li><li><p>example</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Input<span class="token operator">:</span> <span class="token string">"00110011"</span>Output<span class="token operator">:</span> <span class="token number">6</span>Input<span class="token operator">:</span> <span class="token string">"10101"</span>Output<span class="token operator">:</span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">const countBinarySubstrings = (s: string): number =&gt; {    let result: number = 0;    let pre: number = 0;    let cur: number = 1;    for (let i = 0, len = s.length - 1; i &lt; len; i++) {        s[i] === s[i + 1] ? (cur += 1) : ((pre = cur), (cur = 1));        if (pre &gt;= cur) {            result += 1;        }    }    return result;};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="LeetCode-696.png"></p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li><code>pre</code>是上一个数字出现的次数</li><li><code>cur</code>是当前数字出现的次数</li><li>用了穷举法？，把每一位数符合条件的次数相加，返回<code>result</code></li></ol><h3 id="举个🌰-quot-00110-quot"><a href="#举个🌰-quot-00110-quot" class="headerlink" title="举个🌰 &quot;00110&quot;"></a>举个🌰 <code>"00110"</code></h3><ol><li>第0位 0  <code>pre = 0, cur = 0, result = 0</code></li><li>第1位 0  <code>pre = 0, cur = 2, result = 0</code></li><li>第2位 1  <code>pre = 2, cur = 1, result = 1</code></li><li>第3位 1  <code>pre = 2, cur = 2, result = 2</code></li><li>第4位 0  <code>pre = 2, cur = 1, result = 3</code></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Docker Tips &#39;Install Gitlab&#39;</title>
       <link href="post/docker-tips-install-gitlab/"/>
       <url>post/docker-tips-install-gitlab/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>使用docker安装gitlab</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> docker run --detach <span class="token punctuation">\</span>  --hostname <span class="token number">18.179</span>.23.91 <span class="token punctuation">\</span>  --publish <span class="token number">443</span>:443 --publish <span class="token number">80</span>:80 --publish <span class="token number">222</span>:22 <span class="token punctuation">\</span>  --name gitlab <span class="token punctuation">\</span>  --restart always <span class="token punctuation">\</span>  --volume /srv/gitlab/config:/etc/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/logs:/var/log/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>  gitlab/gitlab-ce:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>实例配置 2核4G</li><li>aws得编辑出站规则 默认出站规则只有ssh的20端口开放</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>使用docker安装gitlab</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> docker run --detach <span class="token punctuation">\</span>  --hostname <span class="token number">18.179</span>.23.91 <span class="token punctuation">\</span>  --publish <span class="token number">443</span>:443 --publish <span class="token number">80</span>:80 --publish <span class="token number">222</span>:22 <span class="token punctuation">\</span>  --name gitlab <span class="token punctuation">\</span>  --restart always <span class="token punctuation">\</span>  --volume /srv/gitlab/config:/etc/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/logs:/var/log/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>  gitlab/gitlab-ce:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="docker-command"><a href="#docker-command" class="headerlink" title="docker command"></a>docker command</h2><ul><li>–detach：后台运行</li><li>–hostname：指定运行的 hostname，可以是域名也可以是 IP。</li><li>–publish：端口的映射，可以缩写成 -p</li><li>–name：容器的名称</li><li>–restart：重启的方式<ul><li>no：默认策略，在容器退出时不重启容器</li><li>on-failure：在容器非正常退出时（退出状态非 0），才会重启容器</li><li>on-failure:3：在容器非正常退出时重启容器，最多重启 3 次</li><li>always：在容器退出时总是重启容器</li><li>unless-stopped：在容器退出时总是重启容器，但是不考虑在 Docker 守护进程启动时就已经停止了的容器</li></ul></li><li>–volume：指定本地卷，配置、日志、数据，使用本地卷后，删除容器，不会删除配置、数据</li></ul><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="docker_gitlab.png"></p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>实例配置 2核4G</li><li>aws得编辑出站规则 默认出站规则只有ssh的20端口开放</li></ul>]]></content>
       
       
       <categories>

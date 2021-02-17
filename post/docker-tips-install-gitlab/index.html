@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    85
+                    277
                 </div>
                 
 
@@ -465,6 +465,22 @@
   --volume /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>
   gitlab/gitlab-ce:latest
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="docker-command"><a href="#docker-command" class="headerlink" title="docker command"></a>docker command</h2><ul>
+<li>–detach：后台运行</li>
+<li>–hostname：指定运行的 hostname，可以是域名也可以是 IP。</li>
+<li>–publish：端口的映射，可以缩写成 -p</li>
+<li>–name：容器的名称</li>
+<li>–restart：重启的方式<ul>
+<li>no：默认策略，在容器退出时不重启容器</li>
+<li>on-failure：在容器非正常退出时（退出状态非 0），才会重启容器</li>
+<li>on-failure:3：在容器非正常退出时重启容器，最多重启 3 次</li>
+<li>always：在容器退出时总是重启容器</li>
+<li>unless-stopped：在容器退出时总是重启容器，但是不考虑在 Docker 守护进程启动时就已经停止了的容器</li>
+</ul>
+</li>
+<li>–volume：指定本地卷，配置、日志、数据，使用本地卷后，删除容器，不会删除配置、数据</li>
+</ul>
+<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="docker_gitlab.png"></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
 <li>实例配置 2核4G</li>
 <li>aws得编辑出站规则 默认出站规则只有ssh的20端口开放</li>
@@ -582,52 +598,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/post/docker-tips-install-gitlab/">
+                <a href="/post/leetcode-696/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Docker Tips &#39;Install Gitlab&#39;">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="LeetCode 696">
                         
-                        <span class="card-title">Docker Tips &#39;Install Gitlab&#39;</span>
+                        <span class="card-title">LeetCode 696</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用docker安装gitlab
+                            LeetCode 696
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/" class="post-category">
-                                    インフラ
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Docker/">
-                        <span class="chip bg-color">Docker</span>
-                    </a>
-                    
-                    <a href="/tags/Gitlab/">
-                        <span class="chip bg-color">Gitlab</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>
@@ -866,7 +876,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.8k</span>&nbsp;字
+                class="white-color">7.2k</span>&nbsp;字
             
             
             

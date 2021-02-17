@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-02-11T13:20:56.877Z</updated>
+  <updated>2021-02-17T15:13:18.580Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode 696</title>
+    <link href="https://shengwei.innihon.com/post/leetcode-696/"/>
+    <id>https://shengwei.innihon.com/post/leetcode-696/</id>
+    <published>2021-02-17T14:32:32.000Z</published>
+    <updated>2021-02-17T15:13:18.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Question&quot;&gt;&lt;a href=&quot;#Question&quot; class=&quot;headerlink&quot; title=&quot;Question&quot;&gt;&lt;/a&gt;Question&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Give a string s, count the number of</summary>
+        
+      
+    
+    
+    
+    <category term="Algorithm" scheme="https://shengwei.innihon.com/categories/Algorithm/"/>
+    
+    
+    <category term="LeetCode" scheme="https://shengwei.innihon.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker Tips &#39;Install Gitlab&#39;</title>
     <link href="https://shengwei.innihon.com/post/docker-tips-install-gitlab/"/>
     <id>https://shengwei.innihon.com/post/docker-tips-install-gitlab/</id>
     <published>2021-02-11T12:19:55.000Z</published>
-    <updated>2021-02-11T13:20:56.877Z</updated>
+    <updated>2021-02-11T14:16:08.159Z</updated>
     
     
       
@@ -544,33 +570,6 @@
     
     
     <category term="Hexo" scheme="https://shengwei.innihon.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typescript Tips (1)</title>
-    <link href="https://shengwei.innihon.com/post/typescript-tips-1/"/>
-    <id>https://shengwei.innihon.com/post/typescript-tips-1/</id>
-    <published>2021-01-17T01:44:56.000Z</published>
-    <updated>2021-02-04T17:13:34.507Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;工作中使用 typescript 感觉有欠缺的地方&lt;/li&gt;
-&lt;li&gt;重新过一遍 typescript</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="Tpyescript" scheme="https://shengwei.innihon.com/tags/Tpyescript/"/>
     
   </entry>
   

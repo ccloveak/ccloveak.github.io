@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git Tips &#39;git stash&#39;, せいい">
+    <meta name="keywords" content="React Hook useSearchParam, せいい">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Git Tips &#39;git stash&#39; | せいい</title>
+    <title>React Hook useSearchParam | せいい</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git Tips &#39;git stash&#39;</h1>
+                    <h1 class="description center-align post-title">React Hook useSearchParam</h1>
                 </div>
             </div>
         </div>
@@ -379,8 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">
-                                <span class="chip bg-color">工作经验</span>
+                            <a href="/tags/React/">
+                                <span class="chip bg-color">React</span>
+                            </a>
+                        
+                            <a href="/tags/Hook/">
+                                <span class="chip bg-color">Hook</span>
                             </a>
                         
                     </div>
@@ -391,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/git/" class="post-category">
-                                git
+                            <a href="/categories/Frontend/" class="post-category">
+                                Frontend
                             </a>
                         
                     </div>
@@ -404,21 +408,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-14
+                    2021-02-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-05
+                    2021-02-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    103
+                    326
                 </div>
                 
 
@@ -449,22 +453,40 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>开始review代码，需要频繁切分支</li>
-<li>当前的变更不想提交</li>
+<li>今天帮同事排查storybook的问题，发现了这个hook</li>
 </ul>
-<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ol>
-<li><code>git stash</code></li>
-<li><code>git checkout 其他分支</code></li>
-<li>做一些事情 <code>yarn storybook</code> , <code>yarn test</code> 等等</li>
-<li><code>git checkout 之前工作分支</code></li>
-<li><code>git stash pop</code></li>
-</ol>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>git真是啥功能都有 🎉</li>
-<li>‘git stash’ 还有其他魔法操作，不过对我目前来说，现在这样够用了。<ul>
-<li>我堕落了，我丧失了求知欲。。。</li>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>代码简单，逻辑清晰</li>
+</ul>
+<h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
+<li>对storybook不够友好</li>
+</ul>
+<h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ul>
+<li>我现在取url上的参数是这么取的<pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const parsed = queryString.parse(location.search || '');
+const { filter: urlFilterStr } = parsed;
+const urlFilters: string = urlFilterStr ? String(urlFilterStr) : '{}';
+const formValueObj = JSON.parse(urlFilters);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>用了 <code>query-string</code> ,<code>react-router-dom</code> 这两个库</li>
 </ul>
 </li>
+<li>同事使用 <code>useSearchParam</code>实现就显得比较清爽了</li>
+</ul>
+<pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const filters = useSearchParam('filter');
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="大胆猜想"><a href="#大胆猜想" class="headerlink" title="大胆猜想"></a>大胆猜想</h2><ul>
+<li>感觉底层实现应该很类似，我多加了个初始值 <code>{}</code></li>
+<li>实际场景里，url中不一定存在 <code>filter</code></li>
+<li>感觉是<code>useSearchParam</code>的返回值有点晚了，storybook都是瞬间渲染的，所以取不到<code>useSearchParam()</code>的值</li>
+</ul>
+<h2 id="小心求证"><a href="#小心求证" class="headerlink" title="小心求证"></a>小心求证</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/streamich/react-use/blob/master/src/useSearchParam.ts">useSearchParam实现</a></li>
+<li>虽然看不懂他的实现方法，但是盲猜，他是需要经过<code>window.location</code>变化后才能取到值，尴尬的是storybook貌似没有模拟<code>window.location</code>的变化，可能有但是需要手动添加？！我察觉到这里貌似也有个大坑。</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>配置storybook貌似也是个比较艰巨的任务。</li>
+<li>如果不考虑某些方面的storybook的实现的话，使用<code>useSearchParam</code>是一个很不错的选择。</li>
+<li>其实写完上面这段逻辑是想着自己写个hook优化一下的，奈何时间紧任务重，优先级比较低。</li>
 </ul>
 
                 
@@ -492,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shengwei.innihon.com/post/git-tips-git-stash/">https://shengwei.innihon.com/post/git-tips-git-stash/</a>
+                    <a href="https://shengwei.innihon.com/post/react-hook-usesearchparam/">https://shengwei.innihon.com/post/react-hook-usesearchparam/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -530,8 +552,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">
-                                    <span class="chip bg-color">工作经验</span>
+                                <a href="/tags/React/">
+                                    <span class="chip bg-color">React</span>
+                                </a>
+                            
+                                <a href="/tags/Hook/">
+                                    <span class="chip bg-color">Hook</span>
                                 </a>
                             
                         </div>
@@ -575,77 +601,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/git-tips-no-verify/">
+                <a href="/post/react-hook-usesearchparam/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Git Tips &#39;no-verify&#39;">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="React Hook useSearchParam">
                         
-                        <span class="card-title">Git Tips &#39;no-verify&#39;</span>
+                        <span class="card-title">React Hook useSearchParam</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这不是串好指令，不过很有用
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-14
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/git/" class="post-category">
-                                    git
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">
-                        <span class="chip bg-color">工作经验</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/post/create-mock-data/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Create Mock Data">
-                        
-                        <span class="card-title">Create Mock Data</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            假数据其乐无穷
+                            useSearchParam使用体验
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
                             </span>
                         <span class="publish-author">
                             
@@ -659,15 +637,65 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/api/">
-                        <span class="chip bg-color">api</span>
+                    <a href="/tags/React/">
+                        <span class="chip bg-color">React</span>
                     </a>
                     
-                    <a href="/tags/storybook/">
-                        <span class="chip bg-color">storybook</span>
+                    <a href="/tags/Hook/">
+                        <span class="chip bg-color">Hook</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/post/leetcode-696/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="LeetCode 696">
+                        
+                        <span class="card-title">LeetCode 696</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            LeetCode 696
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>

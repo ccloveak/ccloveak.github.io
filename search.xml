@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>React Hook useSearchParam</title>
+      <link href="post/react-hook-usesearchparam/"/>
+      <url>post/react-hook-usesearchparam/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>今天帮同事排查storybook的问题，发现了这个hook</li></ul><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul><li>代码简单，逻辑清晰</li></ul><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul><li>对storybook不够友好</li></ul><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ul><li>我现在取url上的参数是这么取的<pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const parsed = queryString.parse(location.search || '');const { filter: urlFilterStr } = parsed;const urlFilters: string = urlFilterStr ? String(urlFilterStr) : '{}';const formValueObj = JSON.parse(urlFilters);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>用了 <code>query-string</code> ,<code>react-router-dom</code> 这两个库</li></ul></li><li>同事使用 <code>useSearchParam</code>实现就显得比较清爽了</li></ul><pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const filters = useSearchParam('filter');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="大胆猜想"><a href="#大胆猜想" class="headerlink" title="大胆猜想"></a>大胆猜想</h2><ul><li>感觉底层实现应该很类似，我多加了个初始值 <code>{}</code></li><li>实际场景里，url中不一定存在 <code>filter</code></li><li>感觉是<code>useSearchParam</code>的返回值有点晚了，storybook都是瞬间渲染的，所以取不到<code>useSearchParam()</code>的值</li></ul><h2 id="小心求证"><a href="#小心求证" class="headerlink" title="小心求证"></a>小心求证</h2><ul><li><a href="https://github.com/streamich/react-use/blob/master/src/useSearchParam.ts">useSearchParam实现</a></li><li>虽然看不懂他的实现方法，但是盲猜，他是需要经过<code>window.location</code>变化后才能取到值，尴尬的是storybook貌似没有模拟<code>window.location</code>的变化，可能有但是需要手动添加？！我察觉到这里貌似也有个大坑。</li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>配置storybook貌似也是个比较艰巨的任务。</li><li>如果不考虑某些方面的storybook的实现的话，使用<code>useSearchParam</code>是一个很不错的选择。</li><li>其实写完上面这段逻辑是想着自己写个hook优化一下的，奈何时间紧任务重，优先级比较低。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode 696</title>
       <link href="post/leetcode-696/"/>
       <url>post/leetcode-696/</url>

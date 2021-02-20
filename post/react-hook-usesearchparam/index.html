@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    326
+                    352
                 </div>
                 
 
@@ -460,16 +460,19 @@
 </ul>
 <h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
 <li>对storybook不够友好</li>
+<li>回过头来补充一下，这个缺点可能是我的缺点，需要配置下storybook。。。</li>
 </ul>
 <h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ul>
-<li>我现在取url上的参数是这么取的<pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const parsed = queryString.parse(location.search || '');
+<li>我现在取url上的参数是这么取的<ul>
+<li>用了 <code>query-string</code> ,<code>react-router-dom</code> 这两个库</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const parsed = queryString.parse(location.search || '');
 const { filter: urlFilterStr } = parsed;
 const urlFilters: string = urlFilterStr ? String(urlFilterStr) : '{}';
 const formValueObj = JSON.parse(urlFilters);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>用了 <code>query-string</code> ,<code>react-router-dom</code> 这两个库</li>
-</ul>
-</li>
 <li>同事使用 <code>useSearchParam</code>实现就显得比较清爽了</li>
 </ul>
 <pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const filters = useSearchParam('filter');

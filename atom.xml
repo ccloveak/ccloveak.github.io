@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-02-18T14:47:59.411Z</updated>
+  <updated>2021-02-21T11:54:31.020Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NPM Publish Package (1)</title>
+    <link href="https://shengwei.innihon.com/post/npm-publish-package-1/"/>
+    <id>https://shengwei.innihon.com/post/npm-publish-package-1/</id>
+    <published>2021-02-21T11:11:53.000Z</published>
+    <updated>2021-02-21T11:54:31.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;WHAT&quot;&gt;&lt;a href=&quot;#WHAT&quot; class=&quot;headerlink&quot; title=&quot;WHAT&quot;&gt;&lt;/a&gt;WHAT&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="インフラ" scheme="https://shengwei.innihon.com/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+    <category term="npm" scheme="https://shengwei.innihon.com/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>React Hook useSearchParam</title>
@@ -546,31 +574,6 @@
     
     
     <category term="英语轻松读" scheme="https://shengwei.innihon.com/tags/%E8%8B%B1%E8%AF%AD%E8%BD%BB%E6%9D%BE%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Tips &#39;...props&#39;</title>
-    <link href="https://shengwei.innihon.com/post/react-tips-props/"/>
-    <id>https://shengwei.innihon.com/post/react-tips-props/</id>
-    <published>2021-01-17T14:35:37.000Z</published>
-    <updated>2021-02-04T17:13:34.499Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
     
   </entry>
   

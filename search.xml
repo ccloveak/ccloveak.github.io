@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>NPM Publish Package (1)</title>
+      <link href="post/npm-publish-package-1/"/>
+      <url>post/npm-publish-package-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h2><ul><li><a href="https://www.npmjs.com/">npm</a> 包管理中心</li><li>npm发包 就是把自己写的js脚本（组件）共享出去</li></ul><h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><ul><li>让别人可以通过固定的方法，来使用你共享的组件（方法）</li><li>人人为我，我为人人</li><li>有能力的情况下，做点贡献，解放大家的生产力</li></ul><h2 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h2><ul><li>首先去npm上注册</li><li>其次在本地登陆 npm</li><li>在想要共享的文件下 输入 <code>npm publish</code></li></ul><h2 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h2><ul><li><a href="https://www.npmjs.com/package/just-react">just-react</a> 这是一个简单的react cli框架</li></ul><h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><ul><li>这个系列会详细介绍我发包用了哪些别人制作的插件</li><li>以及相关可能会用到的一些插件</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React Hook useSearchParam</title>
       <link href="post/react-hook-usesearchparam/"/>
       <url>post/react-hook-usesearchparam/</url>
@@ -844,11 +871,11 @@
       
         <tags>
             
-            <tag> Optimization </tag>
-            
             <tag> ES6 </tag>
             
             <tag> 工作经验 </tag>
+            
+            <tag> Optimization </tag>
             
         </tags>
       
@@ -873,11 +900,11 @@
       
         <tags>
             
-            <tag> Optimization </tag>
-            
             <tag> ES6 </tag>
             
             <tag> 工作经验 </tag>
+            
+            <tag> Optimization </tag>
             
         </tags>
       

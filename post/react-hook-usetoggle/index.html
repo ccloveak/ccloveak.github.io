@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode 696, せいい">
+    <meta name="keywords" content="React Hook &#39;useToggle&#39;, せいい">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>LeetCode 696 | せいい</title>
+    <title>React Hook &#39;useToggle&#39; | せいい</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode 696</h1>
+                    <h1 class="description center-align post-title">React Hook &#39;useToggle&#39;</h1>
                 </div>
             </div>
         </div>
@@ -379,8 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="/tags/React/">
+                                <span class="chip bg-color">React</span>
+                            </a>
+                        
+                            <a href="/tags/Hook/">
+                                <span class="chip bg-color">Hook</span>
                             </a>
                         
                     </div>
@@ -391,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Algorithm/" class="post-category">
-                                Algorithm
+                            <a href="/categories/Frontend/" class="post-category">
+                                Frontend
                             </a>
                         
                     </div>
@@ -404,7 +408,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-17
+                    2021-05-15
                 </div>
                 
 
@@ -418,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    199
+                    125
                 </div>
                 
 
@@ -448,44 +452,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><ul>
-<li><p>Give a string s, count the number of non-empty (contiguous) substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</p>
-</li>
-<li><p>example</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Input<span class="token operator">:</span> <span class="token string">"00110011"</span>
-Output<span class="token operator">:</span> <span class="token number">6</span>
-
-Input<span class="token operator">:</span> <span class="token string">"10101"</span>
-Output<span class="token operator">:</span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-</li>
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
+<li>需要把一个按钮变成一个开关，点击展开，再点击闭合</li>
 </ul>
-<h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">const countBinarySubstrings = (s: string): number =&gt; {
-    let result: number = 0;
-    let pre: number = 0;
-    let cur: number = 1;
-    for (let i = 0, len = s.length - 1; i &lt; len; i++) {
-        s[i] === s[i + 1] ? (cur += 1) : ((pre = cur), (cur = 1));
-        if (pre &gt;= cur) {
-            result += 1;
-        }
-    }
-    return result;
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token punctuation">[</span>expandedState<span class="token punctuation">,</span> toggleState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useToggle</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="LeetCode-696.png"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li><code>pre</code>是上一个数字出现的次数</li>
-<li><code>cur</code>是当前数字出现的次数</li>
-<li>用了穷举法？，把每一位数符合条件的次数相加，返回<code>result</code></li>
-</ol>
-<h3 id="举个🌰-quot-00110-quot"><a href="#举个🌰-quot-00110-quot" class="headerlink" title="举个🌰 &quot;00110&quot;"></a>举个🌰 <code>"00110"</code></h3><ol>
-<li>第0位 0  <code>pre = 0, cur = 0, result = 0</code></li>
-<li>第1位 0  <code>pre = 0, cur = 2, result = 0</code></li>
-<li>第2位 1  <code>pre = 2, cur = 1, result = 1</code></li>
-<li>第3位 1  <code>pre = 2, cur = 2, result = 2</code></li>
-<li>第4位 0  <code>pre = 2, cur = 1, result = 3</code></li>
-</ol>
+<span class="token operator">&lt;</span>Button
+  onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">toggleState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    expandedState
+      <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部展开的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部闭合的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&gt;</span>
+  <span class="token punctuation">{</span>expandedState <span class="token operator">?</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部展开"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>UnFoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部闭合"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>FoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>不重复造轮子能省下很多不必要的心智开销</li>
+<li>react-use 真的好用</li>
+</ul>
 
                 
             </div>
@@ -512,7 +505,7 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shengwei.innihon.com/post/leetcode-696/">https://shengwei.innihon.com/post/leetcode-696/</a>
+                    <a href="https://shengwei.innihon.com/post/react-hook-usetoggle/">https://shengwei.innihon.com/post/react-hook-usetoggle/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +543,12 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="/tags/React/">
+                                    <span class="chip bg-color">React</span>
+                                </a>
+                            
+                                <a href="/tags/Hook/">
+                                    <span class="chip bg-color">Hook</span>
                                 </a>
                             
                         </div>
@@ -595,29 +592,30 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/react-hook-usesearchparam/">
+                <a href="/post/react-hook-usetoggle/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="React Hook useSearchParam">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="React Hook &#39;useToggle&#39;">
                         
-                        <span class="card-title">React Hook useSearchParam</span>
+                        <span class="card-title">React Hook &#39;useToggle&#39;</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            useSearchParam使用体验
+                            简单实现开关
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -630,6 +628,7 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -652,31 +651,31 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/docker-tips-install-gitlab/">
+                <a href="/post/dynamic-theme/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Docker Tips &#39;Install Gitlab&#39;">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Dynamic Theme">
                         
-                        <span class="card-title">Docker Tips &#39;Install Gitlab&#39;</span>
+                        <span class="card-title">Dynamic Theme</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用docker安装gitlab
+                            根据系统主题动态切换site主题
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/" class="post-category">
-                                    インフラ
+                            <a href="/categories/Frontend/" class="post-category">
+                                    Frontend
                                 </a>
                             
                             
@@ -686,12 +685,20 @@ Output<span class="token operator">:</span> <span class="token number">4</span><
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Docker/">
-                        <span class="chip bg-color">Docker</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
-                    <a href="/tags/Gitlab/">
-                        <span class="chip bg-color">Gitlab</span>
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">
+                        <span class="chip bg-color">工作经验</span>
+                    </a>
+                    
+                    <a href="/tags/less/">
+                        <span class="chip bg-color">less</span>
+                    </a>
+                    
+                    <a href="/tags/React/">
+                        <span class="chip bg-color">React</span>
                     </a>
                     
                 </div>

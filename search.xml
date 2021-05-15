@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>React Hook &#39;useToggle&#39;</title>
+      <link href="post/react-hook-usetoggle/"/>
+      <url>post/react-hook-usetoggle/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>需要把一个按钮变成一个开关，点击展开，再点击闭合</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token punctuation">[</span>expandedState<span class="token punctuation">,</span> toggleState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useToggle</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span>Button  onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token function">toggleState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    expandedState      <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部展开的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部闭合的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>  <span class="token punctuation">{</span>expandedState <span class="token operator">?</span> <span class="token punctuation">(</span>    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部展开"</span><span class="token operator">&gt;</span>      <span class="token operator">&lt;</span>UnFoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>  <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部闭合"</span><span class="token operator">&gt;</span>      <span class="token operator">&lt;</span>FoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>  <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>不重复造轮子能省下很多不必要的心智开销</li><li>react-use 真的好用</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Dynamic Theme</title>
       <link href="post/dynamic-theme/"/>
       <url>post/dynamic-theme/</url>

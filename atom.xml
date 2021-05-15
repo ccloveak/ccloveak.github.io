@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-05-15T03:29:40.921Z</updated>
+  <updated>2021-05-15T05:15:27.778Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React Hook &#39;useToggle&#39;</title>
+    <link href="https://shengwei.innihon.com/post/react-hook-usetoggle/"/>
+    <id>https://shengwei.innihon.com/post/react-hook-usetoggle/</id>
+    <published>2021-05-15T04:07:34.000Z</published>
+    <updated>2021-05-15T05:15:27.778Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要把一个按钮变成一个开关，点击展开，再点击闭合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
+    
+  </entry>
   
   <entry>
     <title>Dynamic Theme</title>
@@ -555,33 +585,6 @@
     
     
     <category term="SSH" scheme="https://shengwei.innihon.com/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typescript Tips (2)</title>
-    <link href="https://shengwei.innihon.com/post/typescript-tips-2/"/>
-    <id>https://shengwei.innihon.com/post/typescript-tips-2/</id>
-    <published>2021-01-26T13:17:55.000Z</published>
-    <updated>2021-02-06T11:56:14.884Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景（需求）&quot;&gt;&lt;a href=&quot;#背景（需求）&quot; class=&quot;headerlink&quot; title=&quot;背景（需求）&quot;&gt;&lt;/a&gt;背景（需求）&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;随着业务的复杂，简单命名感觉不够用了&lt;ul&gt;
-&lt;li&gt;举个简单的例子:</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="Tpyescript" scheme="https://shengwei.innihon.com/tags/Tpyescript/"/>
     
   </entry>
   

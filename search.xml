@@ -4,11 +4,277 @@
   
     
     <entry>
+      <title>Dynamic Theme</title>
+      <link href="post/dynamic-theme/"/>
+      <url>post/dynamic-theme/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>实现 web 端动态切换主题</li></ul><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>需要实现这个有 2 个步骤</p><ol><li>监听 web 端某个属性，什么时候需要切换主题</li><li>切换主题的方法</li></ol><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol><li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></p></li><li><p>window.less.modifyVars</p></li><li><p>伪代码</p></li></ol><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">window  <span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span>  <span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>    window<span class="token punctuation">.</span>less<span class="token punctuation">.</span><span class="token function">modifyVars</span><span class="token punctuation">(</span><span class="token punctuation">{</span>      color<span class="token operator">:</span> color<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>window  <span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span>  <span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>    window<span class="token punctuation">.</span>less<span class="token punctuation">.</span><span class="token function">modifyVars</span><span class="token punctuation">(</span><span class="token punctuation">{</span>      color<span class="token operator">:</span> color<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="实操感受"><a href="#实操感受" class="headerlink" title="实操感受"></a>实操感受</h2><ul><li>配合 react useEffect 能玩出花</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ES6 </tag>
+            
+            <tag> 工作经验 </tag>
+            
+            <tag> less </tag>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NPM Publish Package (1)</title>
+      <link href="post/npm-publish-package-1/"/>
+      <url>post/npm-publish-package-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h2><ul><li><a href="https://www.npmjs.com/">npm</a> 包管理中心</li><li>npm发包 就是把自己写的js脚本（组件）共享出去</li></ul><h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><ul><li>让别人可以通过固定的方法，来使用你共享的组件（方法）</li><li>人人为我，我为人人</li><li>有能力的情况下，做点贡献，解放大家的生产力</li></ul><h2 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h2><ul><li>首先去npm上注册</li><li>其次在本地登陆 npm</li><li>在想要共享的文件下 输入 <code>npm publish</code></li></ul><h2 id="SAMPLE"><a href="#SAMPLE" class="headerlink" title="SAMPLE"></a>SAMPLE</h2><ul><li><a href="https://www.npmjs.com/package/just-react">just-react</a> 这是一个简单的react cli框架</li></ul><h2 id="系列说明"><a href="#系列说明" class="headerlink" title="系列说明"></a>系列说明</h2><ul><li>这个系列会详细介绍我发包用了哪些别人制作的插件</li><li>以及相关可能会用到的一些插件</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Hook useSearchParam</title>
+      <link href="post/react-hook-usesearchparam/"/>
+      <url>post/react-hook-usesearchparam/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>今天帮同事排查storybook的问题，发现了这个hook</li></ul><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul><li>代码简单，逻辑清晰</li></ul><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul><li>对storybook不够友好</li><li>回过头来补充一下，这个缺点可能是我的缺点，需要配置下storybook。。。</li></ul><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ul><li>我现在取url上的参数是这么取的<ul><li>用了 <code>query-string</code> ,<code>react-router-dom</code> 这两个库</li></ul></li></ul><pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const parsed = queryString.parse(location.search || '');const { filter: urlFilterStr } = parsed;const urlFilters: string = urlFilterStr ? String(urlFilterStr) : '{}';const formValueObj = JSON.parse(urlFilters);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>同事使用 <code>useSearchParam</code>实现就显得比较清爽了</li></ul><pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">const filters = useSearchParam('filter');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="大胆猜想"><a href="#大胆猜想" class="headerlink" title="大胆猜想"></a>大胆猜想</h2><ul><li>感觉底层实现应该很类似，我多加了个初始值 <code>{}</code></li><li>实际场景里，url中不一定存在 <code>filter</code></li><li>感觉是<code>useSearchParam</code>的返回值有点晚了，storybook都是瞬间渲染的，所以取不到<code>useSearchParam()</code>的值</li></ul><h2 id="小心求证"><a href="#小心求证" class="headerlink" title="小心求证"></a>小心求证</h2><ul><li><a href="https://github.com/streamich/react-use/blob/master/src/useSearchParam.ts">useSearchParam实现</a></li><li>虽然看不懂他的实现方法，但是盲猜，他是需要经过<code>window.location</code>变化后才能取到值，尴尬的是storybook貌似没有模拟<code>window.location</code>的变化，可能有但是需要手动添加？！我察觉到这里貌似也有个大坑。</li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>配置storybook貌似也是个比较艰巨的任务。</li><li>如果不考虑某些方面的storybook的实现的话，使用<code>useSearchParam</code>是一个很不错的选择。</li><li>其实写完上面这段逻辑是想着自己写个hook优化一下的，奈何时间紧任务重，优先级比较低。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode 696</title>
+      <link href="post/leetcode-696/"/>
+      <url>post/leetcode-696/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><ul><li><p>Give a string s, count the number of non-empty (contiguous) substrings that have the same number of 0’s and 1’s, and all the 0’s and all the 1’s in these substrings are grouped consecutively.</p></li><li><p>example</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Input<span class="token operator">:</span> <span class="token string">"00110011"</span>Output<span class="token operator">:</span> <span class="token number">6</span>Input<span class="token operator">:</span> <span class="token string">"10101"</span>Output<span class="token operator">:</span> <span class="token number">4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h2><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">const countBinarySubstrings = (s: string): number =&gt; {    let result: number = 0;    let pre: number = 0;    let cur: number = 1;    for (let i = 0, len = s.length - 1; i &lt; len; i++) {        s[i] === s[i + 1] ? (cur += 1) : ((pre = cur), (cur = 1));        if (pre &gt;= cur) {            result += 1;        }    }    return result;};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="LeetCode-696.png"></p><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol><li><code>pre</code>是上一个数字出现的次数</li><li><code>cur</code>是当前数字出现的次数</li><li>用了穷举法？，把每一位数符合条件的次数相加，返回<code>result</code></li></ol><h3 id="举个🌰-quot-00110-quot"><a href="#举个🌰-quot-00110-quot" class="headerlink" title="举个🌰 &quot;00110&quot;"></a>举个🌰 <code>"00110"</code></h3><ol><li>第0位 0  <code>pre = 0, cur = 0, result = 0</code></li><li>第1位 0  <code>pre = 0, cur = 2, result = 0</code></li><li>第2位 1  <code>pre = 2, cur = 1, result = 1</code></li><li>第3位 1  <code>pre = 2, cur = 2, result = 2</code></li><li>第4位 0  <code>pre = 2, cur = 1, result = 3</code></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker Tips &#39;Install Gitlab&#39;</title>
+      <link href="post/docker-tips-install-gitlab/"/>
+      <url>post/docker-tips-install-gitlab/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>使用docker安装gitlab</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> docker run --detach <span class="token punctuation">\</span>  --hostname <span class="token number">18.179</span>.23.91 <span class="token punctuation">\</span>  --publish <span class="token number">443</span>:443 --publish <span class="token number">80</span>:80 --publish <span class="token number">222</span>:22 <span class="token punctuation">\</span>  --name gitlab <span class="token punctuation">\</span>  --restart always <span class="token punctuation">\</span>  --volume /srv/gitlab/config:/etc/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/logs:/var/log/gitlab <span class="token punctuation">\</span>  --volume /srv/gitlab/data:/var/opt/gitlab <span class="token punctuation">\</span>  gitlab/gitlab-ce:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="docker-command"><a href="#docker-command" class="headerlink" title="docker command"></a>docker command</h2><ul><li>–detach：后台运行</li><li>–hostname：指定运行的 hostname，可以是域名也可以是 IP。</li><li>–publish：端口的映射，可以缩写成 -p</li><li>–name：容器的名称</li><li>–restart：重启的方式<ul><li>no：默认策略，在容器退出时不重启容器</li><li>on-failure：在容器非正常退出时（退出状态非 0），才会重启容器</li><li>on-failure:3：在容器非正常退出时重启容器，最多重启 3 次</li><li>always：在容器退出时总是重启容器</li><li>unless-stopped：在容器退出时总是重启容器，但是不考虑在 Docker 守护进程启动时就已经停止了的容器</li></ul></li><li>–volume：指定本地卷，配置、日志、数据，使用本地卷后，删除容器，不会删除配置、数据</li></ul><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="docker_gitlab.png"></p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>实例配置 2核4G</li><li>aws得编辑出站规则 默认出站规则只有ssh的20端口开放</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Gitlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AWS Tips &#39;Install Docker&#39;</title>
+      <link href="post/aws-tips-install-docker/"/>
+      <url>post/aws-tips-install-docker/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>装个docker就不用出了问题新建实例了</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol><li>更新实例上已安装的程序包和程序包缓存<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum update -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>安装最新的 Docker Engine 程序包<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> docker<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>启动 Docker 服务<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">service</span> docker start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>将 root 添加到 docker 组<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">usermod</span> -a -G docker root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>解决 <code>WARNING: bridge-nf-call-iptables is disabled</code><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> /etc/sysctl.conf<span class="token comment"># sysctl.conf</span>net.bridge.bridge-nf-call-ip6tables <span class="token operator">=</span> <span class="token number">1</span>net.bridge.bridge-nf-call-iptables <span class="token operator">=</span> <span class="token number">1</span>sysctl -p<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="EC2-type"><a href="#EC2-type" class="headerlink" title="EC2 type"></a>EC2 type</h2></li></ol><ul><li>Amazon Linux 2 AMI (HVM), SSD Volume Type </li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://docs.aws.amazon.com/zh_cn/AmazonECS/latest/developerguide/docker-basics.html">aws</a></li><li><a href="https://developer.aliyun.com/article/278801">aliyun</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MomentJs Tips (1)</title>
+      <link href="post/momentjs-tips-1/"/>
+      <url>post/momentjs-tips-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><ul><li>有需求需要计算时差,并且对结果做一些定制化的美化</li></ul><h2 id="解決"><a href="#解決" class="headerlink" title="解決"></a>解決</h2><ul><li>momentjs</li></ul><h2 id="code"><a href="#code" class="headerlink" title="code"></a>code</h2><pre class="line-numbers language-Typescript" data-language="Typescript"><code class="language-Typescript">const currentDate = moment(new Date());// UTCTime は バックエンドからもらうconst targetDate = moment(UTCTime);const durationTime = moment.duration(currentDate.diff(targetDate));const days = duration.asDays();const months = duration.asMonths();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h2><ul><li><a href="https://momentjs.com/docs/#/durations/">document</a></li></ul><h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><ul><li>中文社区环境确实差，无效信息多得想打人。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React Plugin </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How To Create New Issue</title>
+      <link href="post/how-to-create-new-issue/"/>
+      <url>post/how-to-create-new-issue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>不会用antd的组件。。阅读理解不好，文档看不懂。</li></ul><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><ul><li><a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a></li></ul><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul><li>一个可复现的demo<ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/protable_from_issue">本地demo</a></li><li>codesandbox</li></ul></li></ul><h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ol><li>去官方的github仓库提issue</li><li>描述问题，描述需求</li><li>贴代码等待回答</li></ol><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>注意语气，帮你是为爱发电，不帮是本分</li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li>new <a href="https://github.com/ant-design/pro-components/issues/1887">issue</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Issue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AWS Tips &#39;ssh config&#39;</title>
+      <link href="post/aws-tips-ssh-config/"/>
+      <url>post/aws-tips-ssh-config/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>人为降低连接aws的复杂的</li><li>之前连接aws <code> ssh -i "aws.pem" ec2-user@ec2-54-178-64-65.ap-northeast-1.compute.amazonaws.com</code></li></ul><h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><ul><li>在 ~/.ssh下创建config<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#  ~/.ssh/config</span>Host aws    HostName 这里是ip或者dns    User ec2-user    Port <span class="token number">22</span>    IdentityFile ~/.ssh/aws.pem    ServerAliveInterval <span class="token number">60</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2></li><li>目前连接aws <code>ssh aws</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> インフラ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AWS </tag>
+            
+            <tag> SSH </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Webpack Tips (2)</title>
+      <link href="post/webpack-tips-2/"/>
+      <url>post/webpack-tips-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ol><li><p>entry</p><ul><li>单入口 SPA <span class="github-emoji"><span>🎉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 字符串形式</li><li>多入口 对象 key-value形式</li></ul></li><li><p>output</p><ul><li>filename<ul><li>通过占位符确保文件名称唯一</li><li><code>'[name].js'</code> 这个name是1里多入口的key 单入口文件名是 <code>main.js</code></li></ul></li><li>path</li></ul></li><li><p>loaders</p><ul><li>module -&gt; rules</li><li>test 指定匹配规则</li><li>use 指定使用的loader名称</li></ul></li><li><p>Plugins<br><img src="plugins.png"></p></li><li><p>Mode</p></li><li><p>bable</p><ul><li>支持es6<ul><li><code>@babel/core @babel/preset-env babel-loader</code></li></ul></li><li>支持react<ul><li><code>react react-dom @babel/preset-react</code></li></ul></li></ul></li><li><p>解析css less</p><ul><li><code>style-loader css-loader less-loader</code></li></ul></li><li><p>解析图片</p><ul><li><code>file-loader</code>用于处理图片</li></ul></li><li><p>解析字体</p><ul><li><code>file-loader</code></li></ul></li><li><p>对 89 优化</p><ul><li><code>url-loader</code></li></ul></li><li><p>文件监听</p><ul><li>–watch</li><li>watch:true</li></ul></li><li><p>热更新</p><ul><li>webpack-dev-server</li><li>HotModuleReplacementPlugin</li><li><code>"dev": "webpack serve --mode development --hot-only" </code></li><li> 槽点满满 教程里的webpack版本是3 现在都5了。。改动有点大</li></ul></li><li><p>文件指纹</p><ul><li>hash<ul><li>path.join / path.resolve</li></ul></li><li>chunkhash<ul><li>主要对js</li></ul></li><li>contenthash<ul><li>主要对css</li><li><code>mini-css-extract-plugin</code></li><li>MiniCssExtractPlugin</li><li>图片的文件指纹 <img src="file_hash.png"></li><li>无法在热更新下使用</li></ul></li></ul></li><li><p>html 压缩</p><ul><li>html-webpack-plugin <img src="html_compression.png"></li></ul></li><li><p>css 压缩</p><ul><li>optimize-css-assets-webpack-plugin <img src="css_compression.png"></li></ul></li></ol><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_setting_demo">github</a></li></ul><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>需要合理利用 stackoverflow github</li><li>不抛弃不放弃</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Webpack Tips (1)</title>
       <link href="post/webpack-tips-1/"/>
       <url>post/webpack-tips-1/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当前项目需要storybook显示画面</li><li>微调配置的时候发现webpack好薄弱啊</li><li>我是个task驱动型选手</li></ul><h2 id="学习途径"><a href="#学习途径" class="headerlink" title="学习途径"></a>学习途径</h2><ul><li>极客时间 视频课程<a href="https://time.geekbang.org/course/intro/100028901">玩转webpack</a></li><li>gitchat</li><li>掘金</li></ul><h2 id="address"><a href="#address" class="headerlink" title="address"></a>address</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_demo">github</a></li></ul><h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ul><li>自动格式化</li><li>自动清除dist<ol><li>通过插件 clean-webpack-plugin <span class="github-emoji"><span>✨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li><li>rm -rf ./dist &amp;&amp; webpack</li></ol></li><li>webpack打包 <code>yarn run build</code></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>当前项目需要storybook显示画面</li><li>微调配置的时候发现webpack好薄弱啊</li><li>我是个task驱动型选手</li></ul><h2 id="学习途径"><a href="#学习途径" class="headerlink" title="学习途径"></a>学习途径</h2><ul><li>极客时间 视频课程<a href="https://time.geekbang.org/course/intro/100028901">玩转webpack</a><ul><li>强烈不推荐购买 这个视频课程是webpack3的 现在已经webpack5了</li></ul></li><li>gitchat</li><li>掘金</li></ul><h2 id="address"><a href="#address" class="headerlink" title="address"></a>address</h2><ul><li><a href="https://github.com/ccloveak/Components_Demo/tree/main/webpack_demo/base_demo">github</a></li></ul><h2 id="メモ"><a href="#メモ" class="headerlink" title="メモ"></a>メモ</h2><ul><li>自动格式化</li><li>自动清除dist<ol><li>通过插件 clean-webpack-plugin <span class="github-emoji"><span>✨</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li><li>rm -rf ./dist &amp;&amp; webpack</li></ol></li><li>webpack打包 <code>yarn run build</code></li></ul>]]></content>
       
       
       <categories>
@@ -707,7 +973,7 @@
       <link href="post/towrite-list/"/>
       <url>post/towrite-list/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>github提issue</li><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>我是一个莫得感情得写作机器人</li></ul><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>把工作中，工作外学到的知识点小技巧总结一下</li><li>把现在想学的东西记下来，就算现在不学以后还是会学的<a href="http://news.sohu.com/20140717/n402350820.shtml">我今天不学明天也要学！</a></li></ul><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul><li>实时更新（想到idea了赶紧记下来）</li><li>素材来源包括不限于（微博，微信，gitchat）</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>Frontend</li><li>Backend</li><li>インフラ</li></ul><h2 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h2><ul><li><a href="../login-with-github/">第三方登录(github)</a></li><li><a href="../start-mongodb-with-docker/">Docker起mongodb</a></li><li><a href="../two-scenarios-with-git-rebase/">git rebase 两种常见场景</a></li><li><a href="../code-optimization-1/">代码优化（命名）</a></li><li><a href="../code-optimization-2/">代码优化（函数）</a></li><li><a href="../clean-your-repo/">优化github仓库</a></li><li><a href="./test-with-puppeteer-1/">Puppeteer系列 基本api</a></li><li><a href="./Configure-Development-Environment-Frontend">前端开发基础框架</a></li><li><a href="./configure-development-environment-backend/">后端开发基础框架</a></li><li><a href="./React-Base-DnD/">react原生拖放实现</a></li><li><a href="./How-To-Create-New-Issue/">github提issue</a></li></ul><h2 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h2><ul><li>antdesign使用(protable)</li><li>向某个开源项目提pr(antdesign)</li><li>ES6 <code>...rest</code> 参数使用</li><li>react中recaptcha使用 测试</li><li>用jest进行单元测试几个常见用法</li><li>nest实现简单的CURD</li><li>封装自己的ui组件（基于antdesign）</li><li>封装自己的hooks（在protable中使用）</li><li>前后端实现通过邮件重置密码</li><li>封装一个‘都道府県’的component</li><li>docker搭react开发环境，预期是拉个镜像下来直接能开发 <a href="https://www.infoq.cn/article/7C3mGBKGrgTUZfleyPSR">参考</a></li><li>webpack打包 <a href="https://time.geekbang.org/course/detail/100028901-97203">参考</a></li><li>ci/cd <a href="https://time.geekbang.org/column/intro/100009701">参考1</a> <a href="https://gitbook.cn/gitchat/activity/5f0c7152425b19297a0b91dc">参考2</a> <a href="https://gitbook.cn/gitchat/activity/5f2e0caaf22886680664880e">参考3</a><ul><li>docker <a href="https://weibo.com/ttarticle/p/show?id=2309404597186812838017">参考</a></li></ul></li><li>ts <a href="https://ts.xcatliu.com/">参考</a><a href="https://gitbook.cn/gitchat/activity/5e64555b2a44db63ee301b8e">参考1</a></li><li>ssh config配置</li><li>nest</li><li><a href="https://www.udemy.com/course/awesome-nextjs-with-react-and-node-amazing-portfolio-app/learn/">next</a></li><li>material ui</li><li>flutter</li><li><a href="https://time.geekbang.org/column/intro/100015201">k8s</a></li><li><a href="https://time.geekbang.org/course/detail/100040001-200160">mongodb</a></li><li>storybook</li><li><a href="https://amplication.com/">amplication</a></li><li><a href="https://github.com/karminski/write-a-programming-language-in-450-lines">write-a-programming-language-in-450-lines</a></li><li><a href="https://www.redhat.com/zh">redhat</a></li><li><a href="https://www.udemy.com/course/microservices-with-node-js-and-react/learn/">microservices</a></li><li><a href="https://time.geekbang.org/course/intro/100034001">swift</a></li><li>爬虫 <a href="https://gitbook.cn/gitchat/activity/5e82f2bea522722020792bf0">参考</a><a href="https://gitbook.cn/gitchat/activity/5e383bd03f10f05c6e7957cc">Node + TypeScript 实战肺炎疫情实时动态数据爬虫</a></li><li>leetcode</li><li>shell <a href="https://gitbook.cn/gitchat/activity/5e0d87c70f626b261ea342ec">脚本化部署 Web 项目，让你的部署更加简单、轻松、优雅！</a></li><li>推送服务 server酱</li></ul>]]></content>
       
       
       <categories>

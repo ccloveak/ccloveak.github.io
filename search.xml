@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>Mid-year Summary</title>
+      <link href="post/mid-year-summary/"/>
+      <url>post/mid-year-summary/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>对自己这段时间的工作生活做个总结</li></ul><h3 id="大概目录层次"><a href="#大概目录层次" class="headerlink" title="大概目录层次"></a>大概目录层次</h3><ol><li>最近在做什么</li><li>这半年做了什么，学到了哪些</li><li>下半年预计会做什么，打算加强哪方么样的面的积累</li><li>2021 年结束的时候理想的状态</li></ol><h2 id="今していること"><a href="#今していること" class="headerlink" title="今していること"></a>今していること</h2><ul><li><p>用 playwright 为项目搭建 e2e 测试框架 （已完成）</p><ul><li>难点是： 在不同的版本依赖中间，找到一个勉强能满足测试需求的平衡（jest, typescript）</li></ul></li><li><p>用 tailwind + antd 搭建适合艺术生展示作品的博客 （进行中）</p></li></ul><h2 id="この半年間に何をしました"><a href="#この半年間に何をしました" class="headerlink" title="この半年間に何をしました"></a>この半年間に何をしました</h2><ol><li>从国际化整理开始，了解项目是怎么实现国际化的</li><li>x-xsrf 的对应</li><li>storybook 的编写</li><li>unit test case 的编写</li><li>简单正则的编写</li><li>react-router 的使用</li><li>react hooks 的使用</li><li>编写自己的 hooks</li><li>用 antd protable 展示数据，那段时间疯狂看 antd 的 api 文档，给 antd 提 issue，向 antd 贡献了一个小改善</li><li>项目需要动态变色，看了一点 webpack 配置 <code>config-overrides.js</code>，简单来说是利用 less 实现动态变色</li><li>跟 10 有关的，利用 antd 的 icon 提供的方法，结合 iconfont，找到了一个特别舒爽方法来导入 icon，使用 icon。 <code>Symbol</code>。</li><li>使用 react-beautiful-dnd 实现了一个嵌套拖拽，不同父级分类的子分类之间可以任意拖拽，父级分类不能拖到子分类</li><li>前端渲染树，第一次真的用到递归。foreach 循环，for 循环等等性能上的优劣，以及代码的可读性。提取成 facet 通用组件。</li><li>隐约记得调了一部分 storybook 的设定，具体哪部分的忘了。。。</li><li>把 e2e 测试导入到项目内部，对比了 playwright，webdriverio，puppeteer,cypress。具体写了 playwright，webdriverio 两套代码。导入项目的过程中还踩了一些坑。</li><li>从项目里学到了 eslint prettier 配置，发布了一个脚手架工具 <a href="https://www.npmjs.com/package/just-react">just-react</a></li></ol><h2 id="下半期に何をするか、何を学びたいのか？"><a href="#下半期に何をするか、何を学びたいのか？" class="headerlink" title="下半期に何をするか、何を学びたいのか？"></a>下半期に何をするか、何を学びたいのか？</h2><ul><li>gitlab 工作流 ci/cd 流程</li><li>编写项目的 e2e test case</li><li>docker</li><li>SEO</li><li>Next.js</li><li>艺术生向的博客</li><li>aws lambda</li><li>一门后端框架 django 或者 express</li><li>一个自动交易机器人</li><li>网页自动化操作机器人，刷新页面，填写表单，提交表单</li><li>稍微接触一下前端性能优化</li></ul><h2 id="2021-年末の理想の姿"><a href="#2021-年末の理想の姿" class="headerlink" title="2021 年末の理想の姿"></a>2021 年末の理想の姿</h2><ul><li>升值（确定不是错别字） 加薪</li><li>2021 没有白过</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> メモ </category>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Node Tips &#39;update&#39;</title>
+      <link href="post/node-tips-update/"/>
+      <url>post/node-tips-update/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>项目导入playwright，playwright期望在node v14以上运行</li></ul><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>升级本地node版本</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol><li>全局按照 ‘n’ <code>npm i -g -n</code></li><li>更新node版本 <code>n stable</code></li></ol><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>有些坑升级下node的version可能就好了，莫名奇妙的好了那种。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Node </tag>
+            
+            <tag> playwright </tag>
+            
+            <tag> E2E </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React Hook &#39;useToggle&#39;</title>
       <link href="post/react-hook-usetoggle/"/>
       <url>post/react-hook-usetoggle/</url>

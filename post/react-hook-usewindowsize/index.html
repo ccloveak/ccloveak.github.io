@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2021计划, せいい">
+    <meta name="keywords" content="React Hook &#39;useWindowSize&#39;, せいい">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>2021计划 | せいい</title>
+    <title>React Hook &#39;useWindowSize&#39; | せいい</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2021计划</h1>
+                    <h1 class="description center-align post-title">React Hook &#39;useWindowSize&#39;</h1>
                 </div>
             </div>
         </div>
@@ -379,8 +379,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Flag/">
-                                <span class="chip bg-color">Flag</span>
+                            <a href="/tags/React/">
+                                <span class="chip bg-color">React</span>
+                            </a>
+                        
+                            <a href="/tags/Hook/">
+                                <span class="chip bg-color">Hook</span>
                             </a>
                         
                     </div>
@@ -391,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/categories/Frontend/" class="post-category">
+                                Frontend
                             </a>
                         
                     </div>
@@ -404,21 +408,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-01
+                    2021-05-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-06
+                    2021-05-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    124
+                    89
                 </div>
                 
 
@@ -448,69 +452,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><ul>
-<li>每日日语<ul>
-<li>n1</li>
-<li>it passport</li>
+                <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul>
+<li>根据页面 size 展示不同的组件</li>
 </ul>
-</li>
-<li>每日英语<ul>
-<li>托业 700</li>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">getSize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">&gt;</span> <span class="token number">1000</span> <span class="token operator">?</span> <span class="token string">"large"</span> <span class="token operator">:</span> <span class="token string">"small"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">useWindowSize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>size<span class="token punctuation">,</span> setSize<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> size<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">Demo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token function">useWindowSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> size <span class="token operator">===</span> <span class="token string">"small"</span> <span class="token operator">?</span> <span class="token operator">&lt;</span>SmallComponent <span class="token operator">/</span><span class="token operator">&gt;</span> <span class="token operator">:</span> <span class="token operator">&lt;</span>LargeComponent <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="关联知识点"><a href="#关联知识点" class="headerlink" title="关联知识点"></a>关联知识点</h2><ul>
+<li>事件监听，移除事件监听</li>
+<li>useEffect 里的 return</li>
 </ul>
-</li>
-<li>每周一题Leetcode</li>
-</ul>
-<h2 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h2><ul>
-<li>每天减肥<ul>
-<li>晚饭吃拉沙</li>
-<li>65kg</li>
-</ul>
-</li>
-<li>奶茶<ul>
-<li>争取一礼拜一杯</li>
-</ul>
-</li>
-<li>睡眠<ul>
-<li>11点前睡，保证8小时睡眠</li>
-</ul>
-</li>
-</ul>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><ul>
-<li>Typescript</li>
-<li>React</li>
-<li>ant design</li>
-<li>正则</li>
-<li>优化代码</li>
-</ul>
-<h2 id="睡后收入"><a href="#睡后收入" class="headerlink" title="睡后收入"></a>睡后收入</h2><ul>
-<li>微信小程序<ul>
-<li>酒店预定</li>
-<li>外卖下单</li>
-</ul>
-</li>
-<li>爬虫<ul>
-<li>supreme抽签</li>
-</ul>
-</li>
-<li>比特币<ul>
-<li>自动交易</li>
-</ul>
-</li>
-<li>YouTube发视频</li>
-</ul>
-<h2 id="一人成军"><a href="#一人成军" class="headerlink" title="一人成军"></a>一人成军</h2><ul>
-<li>树莓派<ul>
-<li>Linux</li>
-<li>个人服务器</li>
-<li>个人vpn</li>
-<li>NAS</li>
-<li>个人git库</li>
-</ul>
-</li>
-<li>AWS</li>
-<li>Nest / Express</li>
-</ul>
-<p><img src="happynewyear.jpeg"></p>
 
                 
             </div>
@@ -537,7 +505,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shengwei.innihon.com/post/2021-ji-hua/">https://shengwei.innihon.com/post/2021-ji-hua/</a>
+                    <a href="https://shengwei.innihon.com/post/react-hook-usewindowsize/">https://shengwei.innihon.com/post/react-hook-usewindowsize/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -575,8 +543,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Flag/">
-                                    <span class="chip bg-color">Flag</span>
+                                <a href="/tags/React/">
+                                    <span class="chip bg-color">React</span>
+                                </a>
+                            
+                                <a href="/tags/Hook/">
+                                    <span class="chip bg-color">Hook</span>
                                 </a>
                             
                         </div>
@@ -620,84 +592,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/login-with-github/">
+                <a href="/post/react-hook-usewindowsize/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Login with Github">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="React Hook &#39;useWindowSize&#39;">
                         
-                        <span class="card-title">Login with Github</span>
+                        <span class="card-title">React Hook &#39;useWindowSize&#39;</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            通过github进行登入
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Backend/" class="post-category">
-                                    Backend
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/OAuth/">
-                        <span class="chip bg-color">OAuth</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/post/2021-ji-hua/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2021计划">
-                        
-                        <span class="card-title">2021计划</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            空了看看，好多事没做。
+                            监控页面大小的hook
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                    生活
+                            <a href="/categories/Frontend/" class="post-category">
+                                    Frontend
                                 </a>
                             
                             
@@ -708,8 +632,65 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flag/">
-                        <span class="chip bg-color">Flag</span>
+                    <a href="/tags/React/">
+                        <span class="chip bg-color">React</span>
+                    </a>
+                    
+                    <a href="/tags/Hook/">
+                        <span class="chip bg-color">Hook</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/post/mid-year-summary/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Mid-year Summary">
+                        
+                        <span class="card-title">Mid-year Summary</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2021年　中間報告書
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E3%83%A1%E3%83%A2/" class="post-category">
+                                    メモ
+                                </a>
+                            
+                            <a href="/categories/%E3%83%A1%E3%83%A2/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">
+                        <span class="chip bg-color">工作经验</span>
                     </a>
                     
                 </div>

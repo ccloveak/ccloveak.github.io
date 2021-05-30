@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-05-30T08:09:12.443Z</updated>
+  <updated>2021-05-30T09:30:38.369Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React Hook &#39;useWindowSize&#39;</title>
+    <link href="https://shengwei.innihon.com/post/react-hook-usewindowsize/"/>
+    <id>https://shengwei.innihon.com/post/react-hook-usewindowsize/</id>
+    <published>2021-05-30T08:40:46.000Z</published>
+    <updated>2021-05-30T09:30:38.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;根据页面 size 展示不同的组件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
+    
+  </entry>
   
   <entry>
     <title>Mid-year Summary</title>
@@ -567,33 +597,6 @@
     <category term="VScode" scheme="https://shengwei.innihon.com/tags/VScode/"/>
     
     <category term="RegExp" scheme="https://shengwei.innihon.com/tags/RegExp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git Tips &#39;git bisect&#39;</title>
-    <link href="https://shengwei.innihon.com/post/git-tips-git-bisect/"/>
-    <id>https://shengwei.innihon.com/post/git-tips-git-bisect/</id>
-    <published>2021-01-28T16:10:53.000Z</published>
-    <updated>2021-02-06T11:56:14.871Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;项目进行到一定程度，突然发现一个错误，而且这个错误还是在之前的某个提交产生的&lt;/li&gt;
-&lt;li&gt;项目leader向我推荐了</summary>
-        
-      
-    
-    
-    
-    <category term="git" scheme="https://shengwei.innihon.com/categories/git/"/>
-    
-    
-    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   

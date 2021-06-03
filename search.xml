@@ -4,6 +4,176 @@
   
     
     <entry>
+      <title>E2E TEST</title>
+      <link href="post/e2e-test/"/>
+      <url>post/e2e-test/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>项目需要导入e2e测试</li><li>e2e测试整合到ci/cd pipeline</li></ul><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li>playwright</li><li>typescript</li><li>create-react-app</li><li>node</li><li>docker</li><li>gitlab yml</li><li>bash</li><li>cross-env</li></ul><h2 id="大概步骤"><a href="#大概步骤" class="headerlink" title="大概步骤"></a>大概步骤</h2><ul><li>在根目录新建e2e文件夹</li><li>新建个e2e测试项目 参考<a href="https://github.com/playwright-community/playwright-jest-examples">playwright-jest-examples</a></li><li>修改 e2e文件夹里的package.json文件，绑定主项目的 yarn start</li><li>启动服务器，进行e2e测试，关闭服务器</li><li>修改 .gitlab-ci.yml  集成到ci/cd</li></ul><h2 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h2><ul><li>通过 cross-env 修改启动e2e服务器时候的环境变量</li><li>linux操作bash 重置e2e数据</li><li>.gitlab-ci.yml 为了e2e 专门建个stage</li><li>使用docker 配置gitlab的runner ，有个docker in docker的配置</li><li>node pm2相关</li><li>npm script中&amp;&amp;和&amp;</li><li>前端端口转发（通过环境变量选择转发的方向）</li><li>jest相关配置</li></ul><h2 id="用上的的-amp-没用上的代码"><a href="#用上的的-amp-没用上的代码" class="headerlink" title="用上的的&amp;没用上的代码"></a>用上的的&amp;没用上的代码</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 启动node的容器 并且直接可以输入命令</span>docker run --name e2e -exec node:14 <span class="token function">tail</span> -f /dev/null<span class="token comment"># logs里找是否存在3000（端口）</span>pm2 logs e2e2 --lines <span class="token number">10</span> <span class="token operator">|</span><span class="token function">grep</span> <span class="token number">3000</span><span class="token comment"># pm2启动前端服务器</span>pm2 start <span class="token function">yarn</span> --name e2e -- e2e:start<span class="token comment"># 查看实时log</span><span class="token function">tail</span> -f -2 ~/.pm2/logs/e2e-out.log<span class="token comment"># 用bach访问一个容器内部</span>docker <span class="token builtin class-name">exec</span> -it e2e <span class="token function">bash</span><span class="token comment"># 3000端口被占用情况，lsof需要下载 apt-get install lsop</span><span class="token function">lsof</span> -i:3000<span class="token comment"># 直接向一个地址发请求</span><span class="token function">curl</span> --location --request GET <span class="token string">'https://example.com?token=exampletoken'</span> <span class="token punctuation">\</span>--header <span class="token string">'TOKEN: これはTOKEN'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="改进点"><a href="#改进点" class="headerlink" title="改进点"></a>改进点</h2><ul><li>在playwright官方提供的docker镜像基础上再添加一些项目的依赖，减少ci/cd的时间</li></ul><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><ul><li>满满的成就感</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> E2E </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+            <tag> playwright </tag>
+            
+            <tag> typescript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Hook &#39;useWindowSize&#39;</title>
+      <link href="post/react-hook-usewindowsize/"/>
+      <url>post/react-hook-usewindowsize/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>根据页面 size 展示不同的组件</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">getSize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>  <span class="token keyword">return</span> window<span class="token punctuation">.</span>innerWidth <span class="token operator">&gt;</span> <span class="token number">1000</span> <span class="token operator">?</span> <span class="token string">"large"</span> <span class="token operator">:</span> <span class="token string">"small"</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">const</span> <span class="token function-variable function">useWindowSize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>  <span class="token keyword">const</span> <span class="token punctuation">[</span>size<span class="token punctuation">,</span> setSize<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token keyword">const</span> <span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>      <span class="token function">setSize</span><span class="token punctuation">(</span><span class="token function">getSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">;</span>    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>      window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">return</span> size<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token function-variable function">Demo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>  <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token function">useWindowSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">return</span> size <span class="token operator">===</span> <span class="token string">"small"</span> <span class="token operator">?</span> <span class="token operator">&lt;</span>SmallComponent <span class="token operator">/</span><span class="token operator">&gt;</span> <span class="token operator">:</span> <span class="token operator">&lt;</span>LargeComponent <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="关联知识点"><a href="#关联知识点" class="headerlink" title="关联知识点"></a>关联知识点</h2><ul><li>事件监听，移除事件监听</li><li>useEffect 里的 return</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mid-year Summary</title>
+      <link href="post/mid-year-summary/"/>
+      <url>post/mid-year-summary/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>对自己这段时间的工作生活做个总结</li></ul><h3 id="大概目录层次"><a href="#大概目录层次" class="headerlink" title="大概目录层次"></a>大概目录层次</h3><ol><li>最近在做什么</li><li>这半年做了什么，学到了哪些</li><li>下半年预计会做什么，打算加强哪方么样的面的积累</li><li>2021 年结束的时候理想的状态</li></ol><h2 id="今していること"><a href="#今していること" class="headerlink" title="今していること"></a>今していること</h2><ul><li><p>用 playwright 为项目搭建 e2e 测试框架 （已完成）</p><ul><li>难点是： 在不同的版本依赖中间，找到一个勉强能满足测试需求的平衡（jest, typescript）</li></ul></li><li><p>用 tailwind + antd 搭建适合艺术生展示作品的博客 （进行中）</p></li></ul><h2 id="この半年間に何をしました"><a href="#この半年間に何をしました" class="headerlink" title="この半年間に何をしました"></a>この半年間に何をしました</h2><ol><li>从国际化整理开始，了解项目是怎么实现国际化的</li><li>x-xsrf 的对应</li><li>storybook 的编写</li><li>unit test case 的编写</li><li>简单正则的编写</li><li>react-router 的使用</li><li>react hooks 的使用</li><li>编写自己的 hooks</li><li>用 antd protable 展示数据，那段时间疯狂看 antd 的 api 文档，给 antd 提 issue，向 antd 贡献了一个小改善</li><li>项目需要动态变色，看了一点 webpack 配置 <code>config-overrides.js</code>，简单来说是利用 less 实现动态变色</li><li>跟 10 有关的，利用 antd 的 icon 提供的方法，结合 iconfont，找到了一个特别舒爽方法来导入 icon，使用 icon。 <code>Symbol</code>。</li><li>使用 react-beautiful-dnd 实现了一个嵌套拖拽，不同父级分类的子分类之间可以任意拖拽，父级分类不能拖到子分类</li><li>前端渲染树，第一次真的用到递归。foreach 循环，for 循环等等性能上的优劣，以及代码的可读性。提取成 facet 通用组件。</li><li>隐约记得调了一部分 storybook 的设定，具体哪部分的忘了。。。</li><li>把 e2e 测试导入到项目内部，对比了 playwright，webdriverio，puppeteer,cypress。具体写了 playwright，webdriverio 两套代码。导入项目的过程中还踩了一些坑。</li><li>从项目里学到了 eslint prettier 配置，发布了一个脚手架工具 <a href="https://www.npmjs.com/package/just-react">just-react</a></li></ol><h2 id="下半期に何をするか、何を学びたいのか？"><a href="#下半期に何をするか、何を学びたいのか？" class="headerlink" title="下半期に何をするか、何を学びたいのか？"></a>下半期に何をするか、何を学びたいのか？</h2><ul><li>gitlab 工作流 ci/cd 流程</li><li>编写项目的 e2e test case</li><li>docker</li><li>SEO</li><li>Next.js</li><li>艺术生向的博客</li><li>aws lambda</li><li>一门后端框架 django 或者 express</li><li>一个自动交易机器人</li><li>网页自动化操作机器人，刷新页面，填写表单，提交表单</li><li>稍微接触一下前端性能优化</li></ul><h2 id="2021-年末の理想の姿"><a href="#2021-年末の理想の姿" class="headerlink" title="2021 年末の理想の姿"></a>2021 年末の理想の姿</h2><ul><li>升值（确定不是错别字） 加薪</li><li>2021 没有白过</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> メモ </category>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Node Tips &#39;update&#39;</title>
+      <link href="post/node-tips-update/"/>
+      <url>post/node-tips-update/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>项目导入playwright，playwright期望在node v14以上运行</li></ul><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>升级本地node版本</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol><li>全局按照 ‘n’ <code>npm i -g -n</code></li><li>更新node版本 <code>n stable</code></li></ol><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>有些坑升级下node的version可能就好了，莫名奇妙的好了那种。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> playwright </tag>
+            
+            <tag> Node </tag>
+            
+            <tag> E2E </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React Hook &#39;useToggle&#39;</title>
+      <link href="post/react-hook-usetoggle/"/>
+      <url>post/react-hook-usetoggle/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>需要把一个按钮变成一个开关，点击展开，再点击闭合</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> <span class="token punctuation">[</span>expandedState<span class="token punctuation">,</span> toggleState<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useToggle</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span>Button  onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>    <span class="token function">toggleState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    expandedState      <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部展开的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"执行全部闭合的方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>  <span class="token punctuation">{</span>expandedState <span class="token operator">?</span> <span class="token punctuation">(</span>    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部展开"</span><span class="token operator">&gt;</span>      <span class="token operator">&lt;</span>UnFoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>  <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>    <span class="token operator">&lt;</span>Tooltip title<span class="token operator">=</span><span class="token string">"全部闭合"</span><span class="token operator">&gt;</span>      <span class="token operator">&lt;</span>FoldSvg className<span class="token operator">=</span><span class="token string">"icon"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">/</span>Tooltip<span class="token operator">&gt;</span>  <span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul><li>不重复造轮子能省下很多不必要的心智开销</li><li>react-use 真的好用</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> Hook </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Dynamic Theme</title>
+      <link href="post/dynamic-theme/"/>
+      <url>post/dynamic-theme/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>实现 web 端动态切换主题</li></ul><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>需要实现这个有 2 个步骤</p><ol><li>监听 web 端某个属性，什么时候需要切换主题</li><li>切换主题的方法</li></ol><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol><li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></p></li><li><p>window.less.modifyVars</p></li><li><p>伪代码</p></li></ol><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">window  <span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span>  <span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>    window<span class="token punctuation">.</span>less<span class="token punctuation">.</span><span class="token function">modifyVars</span><span class="token punctuation">(</span><span class="token punctuation">{</span>      color<span class="token operator">:</span> color<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span>window  <span class="token punctuation">.</span><span class="token function">matchMedia</span><span class="token punctuation">(</span><span class="token string">"(prefers-color-scheme: dark)"</span><span class="token punctuation">)</span>  <span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>    window<span class="token punctuation">.</span>less<span class="token punctuation">.</span><span class="token function">modifyVars</span><span class="token punctuation">(</span><span class="token punctuation">{</span>      color<span class="token operator">:</span> color<span class="token punctuation">,</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="实操感受"><a href="#实操感受" class="headerlink" title="实操感受"></a>实操感受</h2><ul><li>配合 react useEffect 能玩出花</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ES6 </tag>
+            
+            <tag> 工作经验 </tag>
+            
+            <tag> less </tag>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NPM Publish Package (1)</title>
       <link href="post/npm-publish-package-1/"/>
       <url>post/npm-publish-package-1/</url>
@@ -871,11 +1041,11 @@
       
         <tags>
             
+            <tag> Optimization </tag>
+            
             <tag> ES6 </tag>
             
             <tag> 工作经验 </tag>
-            
-            <tag> Optimization </tag>
             
         </tags>
       
@@ -900,11 +1070,11 @@
       
         <tags>
             
+            <tag> Optimization </tag>
+            
             <tag> ES6 </tag>
             
             <tag> 工作经验 </tag>
-            
-            <tag> Optimization </tag>
             
         </tags>
       

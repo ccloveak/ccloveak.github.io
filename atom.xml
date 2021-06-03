@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-06-03T16:31:35.289Z</updated>
+  <updated>2021-06-03T16:45:11.697Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RegExp Tips &#39;Password&#39;</title>
+    <link href="https://shengwei.innihon.com/post/regexp-tips-password/"/>
+    <id>https://shengwei.innihon.com/post/regexp-tips-password/</id>
+    <published>2021-06-03T16:34:06.000Z</published>
+    <updated>2021-06-03T16:45:11.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;展示密码强度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>E2E TEST</title>
@@ -570,36 +598,6 @@
     
     
     <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Hook &#39;useMemo&#39;</title>
-    <link href="https://shengwei.innihon.com/post/react-hook-usememo/"/>
-    <id>https://shengwei.innihon.com/post/react-hook-usememo/</id>
-    <published>2021-01-30T15:20:16.000Z</published>
-    <updated>2021-02-04T17:13:34.498Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;第不知道几次看文档，应该更细致才能有收获&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
-    
-    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
     
   </entry>
   

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>RegExp Tips &#39;Password&#39;</title>
+      <link href="post/regexp-tips-password/"/>
+      <url>post/regexp-tips-password/</url>
+      
+        <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul><li>展示密码强度</li></ul><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> PasswordRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d\\W]{8,63}$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> AlphanumericRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[a-zA-Z])(?=.*\\d)[!-~]+$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//英数字混在</span><span class="token keyword">const</span> UpperLowerLetterRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[A-Z])(?=.*[a-z])[!-~]+$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//大文字小文字混在</span><span class="token keyword">const</span> SymbolRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>    <span class="token string">"^(?=.*[!\"#$%&amp;''()\\^\\-@\\[;:\\],./|`{+*}&lt;&gt;?_])[!-~]+$"</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//記号混在</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><ul><li>escape-string-regexp npm包</li><li>转换后端（java）直接丢过来的正则</li><li>下面是核心代码：</li></ul><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">escapeStringRegexp</span><span class="token punctuation">(</span><span class="token parameter">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> string <span class="token operator">!==</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">'Expected a string'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// Escape characters with special meaning either inside or outside character sets.</span><span class="token comment">// Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.</span><span class="token keyword">return</span> string<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[|\\{}()[\]^$+*?.]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">'\\$&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">-</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">'\\x2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>E2E TEST</title>
       <link href="post/e2e-test/"/>
       <url>post/e2e-test/</url>

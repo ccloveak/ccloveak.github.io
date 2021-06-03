@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="E2E TEST, せいい">
+    <meta name="keywords" content="RegExp Tips &#39;Password&#39;, せいい">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>E2E TEST | せいい</title>
+    <title>RegExp Tips &#39;Password&#39; | せいい</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">E2E TEST</h1>
+                    <h1 class="description center-align post-title">RegExp Tips &#39;Password&#39;</h1>
                 </div>
             </div>
         </div>
@@ -379,16 +379,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/react/">
-                                <span class="chip bg-color">react</span>
-                            </a>
-                        
-                            <a href="/tags/playwright/">
-                                <span class="chip bg-color">playwright</span>
-                            </a>
-                        
-                            <a href="/tags/typescript/">
-                                <span class="chip bg-color">typescript</span>
+                            <a href="/tags/React/">
+                                <span class="chip bg-color">React</span>
                             </a>
                         
                     </div>
@@ -399,8 +391,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/E2E/" class="post-category">
-                                E2E
+                            <a href="/categories/Frontend/" class="post-category">
+                                Frontend
                             </a>
                         
                     </div>
@@ -426,7 +418,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    377
+                    152
                 </div>
                 
 
@@ -457,65 +449,34 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ul>
-<li>项目需要导入e2e测试</li>
-<li>e2e测试整合到ci/cd pipeline</li>
+<li>展示密码强度</li>
 </ul>
-<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
-<li>playwright</li>
-<li>typescript</li>
-<li>create-react-app</li>
-<li>node</li>
-<li>docker</li>
-<li>gitlab yml</li>
-<li>bash</li>
-<li>cross-env</li>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">const</span> PasswordRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d\\W]{8,63}$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> AlphanumericRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[a-zA-Z])(?=.*\\d)[!-~]+$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//英数字混在</span>
+<span class="token keyword">const</span> UpperLowerLetterRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">'^(?=.*[A-Z])(?=.*[a-z])[!-~]+$'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//大文字小文字混在</span>
+<span class="token keyword">const</span> SymbolRegExp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>
+    <span class="token string">"^(?=.*[!\"#$%&amp;''()\\^\\-@\\[;:\\],./|`{+*}&lt;&gt;?_])[!-~]+$"</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//記号混在</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><ul>
+<li>escape-string-regexp npm包</li>
+<li>转换后端（java）直接丢过来的正则</li>
+<li>下面是核心代码：</li>
 </ul>
-<h2 id="大概步骤"><a href="#大概步骤" class="headerlink" title="大概步骤"></a>大概步骤</h2><ul>
-<li>在根目录新建e2e文件夹</li>
-<li>新建个e2e测试项目 参考<a target="_blank" rel="noopener" href="https://github.com/playwright-community/playwright-jest-examples">playwright-jest-examples</a></li>
-<li>修改 e2e文件夹里的package.json文件，绑定主项目的 yarn start</li>
-<li>启动服务器，进行e2e测试，关闭服务器</li>
-<li>修改 .gitlab-ci.yml  集成到ci/cd</li>
-</ul>
-<h2 id="具体细节"><a href="#具体细节" class="headerlink" title="具体细节"></a>具体细节</h2><ul>
-<li>通过 cross-env 修改启动e2e服务器时候的环境变量</li>
-<li>linux操作bash 重置e2e数据</li>
-<li>.gitlab-ci.yml 为了e2e 专门建个stage</li>
-<li>使用docker 配置gitlab的runner ，有个docker in docker的配置</li>
-<li>node pm2相关</li>
-<li>npm script中&amp;&amp;和&amp;</li>
-<li>前端端口转发（通过环境变量选择转发的方向）</li>
-<li>jest相关配置</li>
-</ul>
-<h2 id="用上的的-amp-没用上的代码"><a href="#用上的的-amp-没用上的代码" class="headerlink" title="用上的的&amp;没用上的代码"></a>用上的的&amp;没用上的代码</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 启动node的容器 并且直接可以输入命令</span>
-docker run --name e2e -exec node:14 <span class="token function">tail</span> -f /dev/null
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">escapeStringRegexp</span><span class="token punctuation">(</span><span class="token parameter">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> string <span class="token operator">!==</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">'Expected a string'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
 
-<span class="token comment"># logs里找是否存在3000（端口）</span>
-pm2 logs e2e2 --lines <span class="token number">10</span> <span class="token operator">|</span><span class="token function">grep</span> <span class="token number">3000</span>
+	<span class="token comment">// Escape characters with special meaning either inside or outside character sets.</span>
+	<span class="token comment">// Use a simple backslash escape when it’s always valid, and a `\xnn` escape when the simpler form would be disallowed by Unicode patterns’ stricter grammar.</span>
+	<span class="token keyword">return</span> string
+		<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[|\\{}()[\]^$+*?.]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">'\\$&amp;'</span><span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">-</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">'\\x2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token comment"># pm2启动前端服务器</span>
-pm2 start <span class="token function">yarn</span> --name e2e -- e2e:start
-
-<span class="token comment"># 查看实时log</span>
-<span class="token function">tail</span> -f -2 ~/.pm2/logs/e2e-out.log
-
-<span class="token comment"># 用bach访问一个容器内部</span>
-docker <span class="token builtin class-name">exec</span> -it e2e <span class="token function">bash</span>
-
-<span class="token comment"># 3000端口被占用情况，lsof需要下载 apt-get install lsop</span>
-<span class="token function">lsof</span> -i:3000
-
-<span class="token comment"># 直接向一个地址发请求</span>
-<span class="token function">curl</span> --location --request GET <span class="token string">'https://example.com?token=exampletoken'</span> <span class="token punctuation">\</span>
---header <span class="token string">'TOKEN: これはTOKEN'</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="改进点"><a href="#改进点" class="headerlink" title="改进点"></a>改进点</h2><ul>
-<li>在playwright官方提供的docker镜像基础上再添加一些项目的依赖，减少ci/cd的时间</li>
-</ul>
-<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><ul>
-<li>满满的成就感</li>
-</ul>
-
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -541,7 +502,7 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shengwei.innihon.com/post/e2e-test/">https://shengwei.innihon.com/post/e2e-test/</a>
+                    <a href="https://shengwei.innihon.com/post/regexp-tips-password/">https://shengwei.innihon.com/post/regexp-tips-password/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -579,16 +540,8 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/react/">
-                                    <span class="chip bg-color">react</span>
-                                </a>
-                            
-                                <a href="/tags/playwright/">
-                                    <span class="chip bg-color">playwright</span>
-                                </a>
-                            
-                                <a href="/tags/typescript/">
-                                    <span class="chip bg-color">typescript</span>
+                                <a href="/tags/React/">
+                                    <span class="chip bg-color">React</span>
                                 </a>
                             
                         </div>
@@ -632,9 +585,10 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/post/regexp-tips-password/">
                     <div class="card-image">
@@ -652,9 +606,9 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -667,6 +621,7 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -685,31 +640,31 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/react-hook-usewindowsize/">
+                <a href="/post/e2e-test/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="React Hook &#39;useWindowSize&#39;">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="E2E TEST">
                         
-                        <span class="card-title">React Hook &#39;useWindowSize&#39;</span>
+                        <span class="card-title">E2E TEST</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            监控页面大小的hook
+                            将E2E测试框架整合到当前项目
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Frontend/" class="post-category">
-                                    Frontend
+                            <a href="/categories/E2E/" class="post-category">
+                                    E2E
                                 </a>
                             
                             
@@ -719,12 +674,16 @@ docker <span class="token builtin class-name">exec</span> -it e2e <span class="t
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/React/">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/react/">
+                        <span class="chip bg-color">react</span>
                     </a>
                     
-                    <a href="/tags/Hook/">
-                        <span class="chip bg-color">Hook</span>
+                    <a href="/tags/playwright/">
+                        <span class="chip bg-color">playwright</span>
+                    </a>
+                    
+                    <a href="/tags/typescript/">
+                        <span class="chip bg-color">typescript</span>
                     </a>
                     
                 </div>

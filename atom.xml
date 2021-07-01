@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-06-03T16:45:11.697Z</updated>
+  <updated>2021-07-01T16:49:24.852Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,154 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript Tips &#39;reduce&#39;</title>
+    <link href="https://shengwei.innihon.com/post/javascript-tips-reduce/"/>
+    <id>https://shengwei.innihon.com/post/javascript-tips-reduce/</id>
+    <published>2021-07-01T16:13:18.000Z</published>
+    <updated>2021-07-01T16:49:24.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;又一次暴露我是个菜鸡的事实&lt;/li&gt;
+&lt;li&gt;一个小递归&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;需求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="ES6" scheme="https://shengwei.innihon.com/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jest Tips &#39;test promises&#39;</title>
+    <link href="https://shengwei.innihon.com/post/jest-tips-test-promises/"/>
+    <id>https://shengwei.innihon.com/post/jest-tips-test-promises/</id>
+    <published>2021-07-01T15:55:51.000Z</published>
+    <updated>2021-07-01T16:09:10.383Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;发现了同事写的测试有瑕疵，需要他改进测试方法&lt;/li&gt;
+&lt;li&gt;提供追加测试的具体方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    <category term="Test" scheme="https://shengwei.innihon.com/categories/Frontend/Test/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+    <category term="Jest" scheme="https://shengwei.innihon.com/tags/Jest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Tips &#39;inputRef&#39;</title>
+    <link href="https://shengwei.innihon.com/post/react-tips-inputref/"/>
+    <id>https://shengwei.innihon.com/post/react-tips-inputref/</id>
+    <published>2021-07-01T15:47:11.000Z</published>
+    <updated>2021-07-01T16:08:27.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从 2周一次的 lightning</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jest Tips &#39;test responsive&#39;</title>
+    <link href="https://shengwei.innihon.com/post/jest-tips-test-responsive/"/>
+    <id>https://shengwei.innihon.com/post/jest-tips-test-responsive/</id>
+    <published>2021-06-20T03:48:24.000Z</published>
+    <updated>2021-07-01T15:45:29.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    <category term="Test" scheme="https://shengwei.innihon.com/categories/Frontend/Test/"/>
+    
+    
+    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
+    
+    <category term="Jest" scheme="https://shengwei.innihon.com/tags/Jest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node Package &#39;spawnd&#39;</title>
+    <link href="https://shengwei.innihon.com/post/node-package-spawnd/"/>
+    <id>https://shengwei.innihon.com/post/node-package-spawnd/</id>
+    <published>2021-06-20T03:13:54.000Z</published>
+    <updated>2021-07-01T15:45:29.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
+    
+    <category term="E2E" scheme="https://shengwei.innihon.com/categories/Backend/E2E/"/>
+    
+    
+    <category term="playwright" scheme="https://shengwei.innihon.com/tags/playwright/"/>
+    
+    <category term="node" scheme="https://shengwei.innihon.com/tags/node/"/>
+    
+  </entry>
   
   <entry>
     <title>RegExp Tips &#39;Password&#39;</title>
@@ -459,145 +607,6 @@
     <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
     
     <category term="SSH" scheme="https://shengwei.innihon.com/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Webpack Tips (2)</title>
-    <link href="https://shengwei.innihon.com/post/webpack-tips-2/"/>
-    <id>https://shengwei.innihon.com/post/webpack-tips-2/</id>
-    <published>2021-02-06T15:45:30.000Z</published>
-    <updated>2021-02-08T10:22:17.819Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;メモ&quot;&gt;&lt;a href=&quot;#メモ&quot; class=&quot;headerlink&quot; title=&quot;メモ&quot;&gt;&lt;/a&gt;メモ&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;entry&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;单入口 SPA &lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="webpack" scheme="https://shengwei.innihon.com/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Webpack Tips (1)</title>
-    <link href="https://shengwei.innihon.com/post/webpack-tips-1/"/>
-    <id>https://shengwei.innihon.com/post/webpack-tips-1/</id>
-    <published>2021-02-06T13:40:41.000Z</published>
-    <updated>2021-02-08T10:22:17.818Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="webpack" scheme="https://shengwei.innihon.com/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How To Use IconFont Icon</title>
-    <link href="https://shengwei.innihon.com/post/how-to-use-iconfont-icon/"/>
-    <id>https://shengwei.innihon.com/post/how-to-use-iconfont-icon/</id>
-    <published>2021-02-04T17:15:08.000Z</published>
-    <updated>2021-02-04T17:44:02.470Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;ant design &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
-    
-    <category term="Icon" scheme="https://shengwei.innihon.com/tags/Icon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Tips &#39;Upload File&#39;</title>
-    <link href="https://shengwei.innihon.com/post/aws-tips-upload-file/"/>
-    <id>https://shengwei.innihon.com/post/aws-tips-upload-file/</id>
-    <published>2021-02-03T15:33:54.000Z</published>
-    <updated>2021-02-04T17:13:34.488Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;需要往AWS上传文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
-    
-    
-    <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AWS Tips &#39;Set Root Passsword&#39;</title>
-    <link href="https://shengwei.innihon.com/post/aws-tips-set-root-passsword/"/>
-    <id>https://shengwei.innihon.com/post/aws-tips-set-root-passsword/</id>
-    <published>2021-02-03T15:27:49.000Z</published>
-    <updated>2021-02-04T17:13:34.487Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;通过 &lt;code&gt;*.pem&lt;/code&gt; 登录aws ec2的时候，默认的不是root用户&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Backend" scheme="https://shengwei.innihon.com/categories/Backend/"/>
-    
-    
-    <category term="AWS" scheme="https://shengwei.innihon.com/tags/AWS/"/>
     
   </entry>
   

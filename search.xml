@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Chrome Extension &#39;start&#39;</title>
+      <link href="post/chrome-extension-start/"/>
+      <url>post/chrome-extension-start/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul><li>在做sessionTimeout的时候被leader点拨加强<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window">Window</a>相关方面的知识</li><li>项目组后端大佬写了一个js方法，提升工作效率</li></ul><h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul><li>YouTube</li><li>bilibili</li></ul><h2 id="Repository"><a href="#Repository" class="headerlink" title="Repository"></a>Repository</h2><p><a href="https://github.com/ccloveak/backlog_extension">github</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flag </tag>
+            
+            <tag> React </tag>
+            
+            <tag> Antd </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Javascript Tips &#39;reduce&#39;</title>
       <link href="post/javascript-tips-reduce/"/>
       <url>post/javascript-tips-reduce/</url>
@@ -74,9 +103,9 @@
       
         <tags>
             
-            <tag> 工作经验 </tag>
-            
             <tag> React </tag>
+            
+            <tag> 工作经验 </tag>
             
         </tags>
       
@@ -323,13 +352,13 @@
       
         <tags>
             
+            <tag> React </tag>
+            
             <tag> ES6 </tag>
             
             <tag> 工作经验 </tag>
             
             <tag> less </tag>
-            
-            <tag> React </tag>
             
         </tags>
       
@@ -614,9 +643,9 @@
       
         <tags>
             
-            <tag> 工作经验 </tag>
-            
             <tag> React </tag>
+            
+            <tag> 工作经验 </tag>
             
             <tag> Icon </tag>
             

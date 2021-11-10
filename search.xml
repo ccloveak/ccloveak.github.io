@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>Echart Tips &#39;Render Two Charts&#39;</title>
+      <link href="post/echart-tips-render-two-charts/"/>
+      <url>post/echart-tips-render-two-charts/</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>时间紧，任务重，目前的项目用一个不是很优雅的方式渲染了两张关联性很强的chart</li><li>我轻微的代码洁癖</li></ul><h3 id="期待"><a href="#期待" class="headerlink" title="期待"></a>期待</h3><ul><li>在一张canvas画布里渲染两张图</li></ul><h3 id="实现逻辑"><a href="#实现逻辑" class="headerlink" title="实现逻辑"></a>实现逻辑</h3><ol><li>yAxis，xAxis 有一个gridIndex属性</li><li>grid支持穿对象数组</li></ol><h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><ul><li>可以直接在echart的playground查看</li></ul><pre class="line-numbers language-TypeScript" data-language="TypeScript"><code class="language-TypeScript">option = {  legend: {},  tooltip: {},  dataset: {    source: [      ['product', '2012', '2013', '2014', '2015'],      ['Matcha Latte', 41.1, 30.4, 65.1, 53.3],      ['Milk Tea', 86.5, 92.1, 85.7, 83.1],      ['Cheese Cocoa', 24.1, 67.2, 79.5, 86.4]    ]  },  yAxis: [    { type: 'category', gridIndex: 0 },    { type: 'category', gridIndex: 1,axisLabel:{show:false} }  ],  xAxis: [{ gridIndex: 0 ,axisLabel:{show:false}}, { gridIndex: 1,axisLabel:{show:false}}],  grid: [{ left: '150px',right:"35%" },{ left: '65%',right:'0' }],  series: [    { type: 'bar', seriesLayoutBy: 'row' },    { type: 'bar', seriesLayoutBy: 'row' },    { type: 'bar', seriesLayoutBy: 'row' },    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 },    { type: 'bar', xAxisIndex: 1, yAxisIndex: 1 }  ]};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="小记"><a href="#小记" class="headerlink" title="小记"></a>小记</h3><ul><li>自己定制的乐趣真是其乐无穷。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Echart </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>NEXT Tips &#39;render in Echart&#39;</title>
+      <link href="post/next-tips-render-in-echart/"/>
+      <url>post/next-tips-render-in-echart/</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ul><li>有个需求需要在 echart的tooltip里进行跳转选项的选择</li><li>项目框架是 Next</li></ul><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><ul><li>默认的tooltip只能用模版语言写html，虽然导入了tailwind，可以用tailwind画一个ui齐全的样式按钮，但是跳转只能通过a标签跳转，无法走next的link。</li></ul><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>在tooltip里用 <code>ReactDOM.render</code> 渲染一个react节点，这样可以就可以在tooltip里直接写react，可以在里面调用页面上定义的各种方法。</p><h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">  <span class="token function-variable function">formatter</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>        <span class="token keyword">const</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'toolTip'</span><span class="token punctuation">)</span>        <span class="token keyword">if</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span> <span class="token punctuation">{</span>          ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>           <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>              <span class="token comment">// これは　react　code</span>            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">,</span>            root          <span class="token punctuation">)</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>      <span class="token keyword">return</span> <span class="token string">'&lt;div id="toolTip"&gt;&lt;/div&gt;'</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Echart </tag>
+            
+            <tag> Next </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NEXT Tips &#39;image loader error&#39;</title>
       <link href="post/next-tips-image-loader-error/"/>
       <url>post/next-tips-image-loader-error/</url>

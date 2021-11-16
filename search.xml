@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Next Intensive Training</title>
+      <link href="post/next-intensive-training/"/>
+      <url>post/next-intensive-training/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ol><li>目前项目使用Next开发，我负责前端开发</li><li>想开发一个个人portfolio网站 前端Next，后端AWS lambda，架构 AWS</li><li>希望使用Next开发landing page</li><li>希望快速开发页面</li></ol><h2 id="具体"><a href="#具体" class="headerlink" title="具体"></a>具体</h2><ol><li>使用Next tailwind 重构YouTube react项目<ol><li><a href="https://www.youtube.com/watch?v=UKdQjQX1Pko&amp;ab_channel=JavaScriptMastery">Build and Deploy a Google Maps Travel Companion Application | React.js</a> 未完成</li><li><a href="https://www.youtube.com/watch?v=MqDlsjc8GLo&amp;ab_channel=SonnySangha">Let’s build Hulu 2.0 with REACT.JS! (Next.js, Tailwind CSS, Responsive)</a> 未完成</li><li><a href="https://www.youtube.com/watch?v=CdDXbvBFXLY&amp;ab_channel=CoderCoder">Use the Google Maps API to build a custom map with markers</a> 未完成</li><li><a href="https://www.youtube.com/watch?v=Gbnjn-1Q2d8&amp;ab_channel=AdamLaMorre">NextJS Chat App - Build &amp; Deploy in 27 Minutes! </a> 未完成</li><li><a href="https://www.youtube.com/watch?v=iJ_MiYEgDiM&amp;t=3574s&amp;ab_channel=LeeRobinson">Building a Netflix Clone with Next.js, Tailwind CSS, and Next Auth</a> 未完成</li><li><a href="https://www.youtube.com/watch?v=zMXHYSqltmU&amp;t=1s&amp;ab_channel=ILWYennefer">Let’s build Disney+ with Tailwind CSS &amp; NEXT.JS! (Responsive, SSR React, Firebase &amp; TMDB API) </a> 未完成</li><li><a href="https://www.youtube.com/watch?v=FiGmAI5e91M&amp;t=2081s&amp;ab_channel=TraversyMedia">React &amp; Tailwind CSS Image Gallery</a> 未完成</li><li>Next官方demo学习</li></ol></li><li>通过以上项目了解部署，cloud function，api调用，数据获取等等</li><li>时间 2021.11.17 ～ 2022.1.31 10个Next以上Next项目</li></ol><h2 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h2><ul><li>一个月开发重构部署4个Next projec</li></ul><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul><li>总结归纳适合自己的Next开发工具，开发流程，具体到库的使用配置，lint等等</li></ul><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li>尝试学习Next 12新功能</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Frontend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Next Flag </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Echart Tips &#39;Render Two Charts&#39;</title>
       <link href="post/echart-tips-render-two-charts/"/>
       <url>post/echart-tips-render-two-charts/</url>

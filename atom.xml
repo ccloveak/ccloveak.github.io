@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-11-10T15:22:16.958Z</updated>
+  <updated>2021-11-16T17:41:47.252Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Next Intensive Training</title>
+    <link href="https://shengwei.innihon.com/post/next-intensive-training/"/>
+    <id>https://shengwei.innihon.com/post/next-intensive-training/</id>
+    <published>2021-11-16T17:06:02.000Z</published>
+    <updated>2021-11-16T17:41:47.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;目前项目使用Next开发，我负责前端开发&lt;/li&gt;
+&lt;li&gt;想开发一个个人portfolio网站 前端Next，后端AWS</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
+    
+    
+    <category term="Next Flag" scheme="https://shengwei.innihon.com/tags/Next-Flag/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Echart Tips &#39;Render Two Charts&#39;</title>
     <link href="https://shengwei.innihon.com/post/echart-tips-render-two-charts/"/>
     <id>https://shengwei.innihon.com/post/echart-tips-render-two-charts/</id>
     <published>2021-11-10T15:10:04.000Z</published>
-    <updated>2021-11-10T15:22:16.958Z</updated>
+    <updated>2021-11-10T15:22:16.000Z</updated>
     
     
       
@@ -46,7 +73,7 @@
     <link href="https://shengwei.innihon.com/post/next-tips-render-in-echart/"/>
     <id>https://shengwei.innihon.com/post/next-tips-render-in-echart/</id>
     <published>2021-11-10T14:51:51.000Z</published>
-    <updated>2021-11-10T15:07:10.931Z</updated>
+    <updated>2021-11-10T15:07:10.000Z</updated>
     
     
       
@@ -75,7 +102,7 @@
     <link href="https://shengwei.innihon.com/post/next-tips-image-loader-error/"/>
     <id>https://shengwei.innihon.com/post/next-tips-image-loader-error/</id>
     <published>2021-11-08T16:27:51.000Z</published>
-    <updated>2021-11-08T16:35:25.387Z</updated>
+    <updated>2021-11-08T16:35:25.000Z</updated>
     
     
       
@@ -103,7 +130,7 @@
     <link href="https://shengwei.innihon.com/post/chrome-extension-start/"/>
     <id>https://shengwei.innihon.com/post/chrome-extension-start/</id>
     <published>2021-07-07T14:40:15.000Z</published>
-    <updated>2021-11-08T16:19:46.176Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -133,7 +160,7 @@
     <link href="https://shengwei.innihon.com/post/javascript-tips-reduce/"/>
     <id>https://shengwei.innihon.com/post/javascript-tips-reduce/</id>
     <published>2021-07-01T16:13:18.000Z</published>
-    <updated>2021-11-08T16:19:46.176Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -162,7 +189,7 @@
     <link href="https://shengwei.innihon.com/post/jest-tips-test-promises/"/>
     <id>https://shengwei.innihon.com/post/jest-tips-test-promises/</id>
     <published>2021-07-01T15:55:51.000Z</published>
-    <updated>2021-11-08T16:19:46.176Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -195,7 +222,7 @@
     <link href="https://shengwei.innihon.com/post/react-tips-inputref/"/>
     <id>https://shengwei.innihon.com/post/react-tips-inputref/</id>
     <published>2021-07-01T15:47:11.000Z</published>
-    <updated>2021-11-08T16:19:46.178Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -223,7 +250,7 @@
     <link href="https://shengwei.innihon.com/post/jest-tips-test-responsive/"/>
     <id>https://shengwei.innihon.com/post/jest-tips-test-responsive/</id>
     <published>2021-06-20T03:48:24.000Z</published>
-    <updated>2021-11-08T16:19:46.177Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -252,7 +279,7 @@
     <link href="https://shengwei.innihon.com/post/node-package-spawnd/"/>
     <id>https://shengwei.innihon.com/post/node-package-spawnd/</id>
     <published>2021-06-20T03:13:54.000Z</published>
-    <updated>2021-11-08T16:19:46.178Z</updated>
+    <updated>2021-11-08T16:19:46.000Z</updated>
     
     
       
@@ -281,7 +308,7 @@
     <link href="https://shengwei.innihon.com/post/regexp-tips-password/"/>
     <id>https://shengwei.innihon.com/post/regexp-tips-password/</id>
     <published>2021-06-03T16:34:06.000Z</published>
-    <updated>2021-06-06T13:03:22.000Z</updated>
+    <updated>2021-06-06T13:03:22.492Z</updated>
     
     
       
@@ -309,7 +336,7 @@
     <link href="https://shengwei.innihon.com/post/e2e-test/"/>
     <id>https://shengwei.innihon.com/post/e2e-test/</id>
     <published>2021-06-03T15:57:36.000Z</published>
-    <updated>2021-06-06T13:03:22.000Z</updated>
+    <updated>2021-06-06T13:03:22.492Z</updated>
     
     
       
@@ -342,7 +369,7 @@
     <link href="https://shengwei.innihon.com/post/react-hook-usewindowsize/"/>
     <id>https://shengwei.innihon.com/post/react-hook-usewindowsize/</id>
     <published>2021-05-30T08:40:46.000Z</published>
-    <updated>2021-05-30T09:30:38.000Z</updated>
+    <updated>2021-05-30T09:30:38.369Z</updated>
     
     
       
@@ -372,7 +399,7 @@
     <link href="https://shengwei.innihon.com/post/mid-year-summary/"/>
     <id>https://shengwei.innihon.com/post/mid-year-summary/</id>
     <published>2021-05-30T07:03:58.000Z</published>
-    <updated>2021-05-30T08:09:12.000Z</updated>
+    <updated>2021-05-30T08:09:12.443Z</updated>
     
     
       
@@ -402,7 +429,7 @@
     <link href="https://shengwei.innihon.com/post/node-tips-update/"/>
     <id>https://shengwei.innihon.com/post/node-tips-update/</id>
     <published>2021-05-27T17:45:04.000Z</published>
-    <updated>2021-05-30T07:02:34.000Z</updated>
+    <updated>2021-05-30T07:02:34.458Z</updated>
     
     
       
@@ -464,7 +491,7 @@
     <link href="https://shengwei.innihon.com/post/dynamic-theme/"/>
     <id>https://shengwei.innihon.com/post/dynamic-theme/</id>
     <published>2021-05-15T03:04:40.000Z</published>
-    <updated>2021-05-15T03:29:40.000Z</updated>
+    <updated>2021-05-15T03:29:40.921Z</updated>
     
     
       
@@ -498,7 +525,7 @@
     <link href="https://shengwei.innihon.com/post/npm-publish-package-1/"/>
     <id>https://shengwei.innihon.com/post/npm-publish-package-1/</id>
     <published>2021-02-21T11:11:53.000Z</published>
-    <updated>2021-05-15T03:16:56.000Z</updated>
+    <updated>2021-05-15T03:16:56.632Z</updated>
     
     
       
@@ -526,7 +553,7 @@
     <link href="https://shengwei.innihon.com/post/react-hook-usesearchparam/"/>
     <id>https://shengwei.innihon.com/post/react-hook-usesearchparam/</id>
     <published>2021-02-18T13:39:47.000Z</published>
-    <updated>2021-05-15T03:16:56.000Z</updated>
+    <updated>2021-05-15T03:16:56.633Z</updated>
     
     
       
@@ -556,7 +583,7 @@
     <link href="https://shengwei.innihon.com/post/leetcode-696/"/>
     <id>https://shengwei.innihon.com/post/leetcode-696/</id>
     <published>2021-02-17T14:32:32.000Z</published>
-    <updated>2021-05-15T03:16:56.000Z</updated>
+    <updated>2021-05-15T03:16:56.623Z</updated>
     
     
       
@@ -574,36 +601,6 @@
     
     
     <category term="LeetCode" scheme="https://shengwei.innihon.com/tags/LeetCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker Tips &#39;Install Gitlab&#39;</title>
-    <link href="https://shengwei.innihon.com/post/docker-tips-install-gitlab/"/>
-    <id>https://shengwei.innihon.com/post/docker-tips-install-gitlab/</id>
-    <published>2021-02-11T12:19:55.000Z</published>
-    <updated>2021-05-15T03:16:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;使用docker安装gitlab&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="インフラ" scheme="https://shengwei.innihon.com/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/"/>
-    
-    
-    <category term="Docker" scheme="https://shengwei.innihon.com/tags/Docker/"/>
-    
-    <category term="Gitlab" scheme="https://shengwei.innihon.com/tags/Gitlab/"/>
     
   </entry>
   

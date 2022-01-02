@@ -4,6 +4,48 @@
   
     
     <entry>
+      <title>2022 Plan</title>
+      <link href="post/2022-plan/"/>
+      <url>post/2022-plan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h2><ol><li>赚钱</li><li>不是那么累的赚钱（身体累/心理累）</li><li>找对象</li><li>健康管理</li></ol><h2 id="skill-tree"><a href="#skill-tree" class="headerlink" title="skill tree"></a>skill tree</h2><ol><li>typescript</li><li>jest</li><li>storybook</li><li>playwright</li><li>next</li><li>react</li><li>tailwind</li><li>echart</li><li>gitlab</li><li>aws</li><li>k8s</li><li>python 爬虫</li><li>php wordpress</li></ol><h2 id="want-to-learn"><a href="#want-to-learn" class="headerlink" title="want to learn"></a>want to learn</h2><ol><li>go</li><li>python 自动交易</li><li>machine learning</li><li>web3.0</li></ol><h2 id="自我分析"><a href="#自我分析" class="headerlink" title="自我分析"></a>自我分析</h2><ol><li>我其实毫无审美可言，有design的话，根据设计图开发还可以（可以保证页面逻辑没有问题），自己设计那可真是要了我的老命，而且人跟人的审美还不一样，需要迎合别人的审美的时候，只能安慰自己，甲方爸爸给钱了。</li><li>适合当大厂螺丝钉，根据需求开发，厘清责任，用git保护自己</li><li>适合带前端团队，code review，需要组员水平在一定level之上</li><li>最近在学k8s，明显感到注意力不集中，如果不出意外的话，再自学个go，devops相关的学习只能从工作中去学了（转岗顺利的话）</li></ol><h2 id="1000万"><a href="#1000万" class="headerlink" title="1000万"></a>1000万</h2><h3 id="Plan-A"><a href="#Plan-A" class="headerlink" title="Plan A"></a>Plan A</h3><ul><li>做好本职工作，满足上司需求（next，echart）</li></ul><h3 id="Plan-B"><a href="#Plan-B" class="headerlink" title="Plan B"></a>Plan B</h3><ul><li>web自动化处理（playwright，node，python，mongodb，AWS，next）</li></ul><h3 id="Plan-C"><a href="#Plan-C" class="headerlink" title="Plan C"></a>Plan C</h3><ul><li>Landing page（tailwind，next）</li><li>Art portfolio（tailwind，next）</li></ul><h3 id="Plan-D"><a href="#Plan-D" class="headerlink" title="Plan D"></a>Plan D</h3><ul><li>交易机器人（python，AWS）<ul><li>FX</li><li>BTC</li></ul></li></ul><h2 id="赚钱之外"><a href="#赚钱之外" class="headerlink" title="赚钱之外"></a>赚钱之外</h2><h3 id="背景需求"><a href="#背景需求" class="headerlink" title="背景需求"></a>背景需求</h3><p>2022 开始个人事业主第一年，需要开始复试记账</p><h3 id="TODO-List"><a href="#TODO-List" class="headerlink" title="TODO List"></a>TODO List</h3><ol><li>前后端实现一个记账web system</li><li>用machine learning拍照自动记录明细（毕竟我学完了吴恩达的machine learning 虽然是Matlab的）</li><li>转成react native上架苹果店</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+          <category> メモ </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2021 Annual Report</title>
+      <link href="post/2021-annual-report/"/>
+      <url>post/2021-annual-report/</url>
+      
+        <content type="html"><![CDATA[<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>2021是充满感激的一年</li><li>2021是充实自己的一年</li></ol><h2 id="感激-感恩-感谢"><a href="#感激-感恩-感谢" class="headerlink" title="感激 感恩 感谢"></a>感激 感恩 感谢</h2><ol><li>张雷<ol><li>手把手教我react typescript jest</li><li>工作中让我挑战前端架构方面的工作</li><li>工作中让我挑战前端自动化方面的工作</li><li>工作中让我挑战前端E2E方面的工作</li><li>严格要求，提升对编码洁癖的追求</li><li>拔高程序员的基础，提升眼界</li><li>不管做人还是做事，都要实实在在，按照规则做事，用法律保护自己</li></ol></li><li>吴旭东<ol><li>请我干饭</li><li>喊我搞交易</li><li>喊我学英语</li><li>喊我学算法</li><li>向我传授人生经验</li></ol></li><li>现在公司的老板<ol><li>给了我一份不是很忙的工作，让我有时间思考技术层的边边角角</li><li>给了我一份薪水过得去的工作，让我不至于为钱委屈</li></ol></li><li>上家公司的同事<ol><li>向后端同事提需求，可以得到超出期望的反馈，后端宠着前端</li><li>向前端同事提问，可以得到超出期望的帮助，就差手把手教你写代码了</li><li>胸闷的时候还能找其他组的同事开解</li></ol></li></ol><h3 id="具体"><a href="#具体" class="headerlink" title="具体"></a>具体</h3><ol><li>在最近一次转职过程中，有其他公司的老板开的工资比现在的工资高，还说可以帮忙调整一下书面工资额来申请高度人才。。。实事求是，一次谎言需要一百次弥补。虽然现在工资少了，但是一切都是真实情况，安心。</li><li>目前的前端架构是我搭的，有个地方参考了之前的项目，弄的有点复杂，具体就是把请求类型返回类型都给加上了，讲道理不加也可以，下意识对自己严格要求了，果然后期扩张相对轻松</li><li>用上家公司学到知识，为现在的公司搭了一个小春网自动回复系统，相关技术 gitlab runner,gitlab ci/cd,playwright,node,有个难点是ci/cd过程中更新repository</li></ol><h2 id="生活-娱乐"><a href="#生活-娱乐" class="headerlink" title="生活 娱乐"></a>生活 娱乐</h2><ol><li>冲绳潜水</li><li>爬富士山</li><li>健身房会员</li><li>switch</li><li>dota2</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+          <category> メモ </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Frontend Permissions System</title>
       <link href="post/frontend-permissions-system/"/>
       <url>post/frontend-permissions-system/</url>

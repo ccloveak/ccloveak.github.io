@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2021-11-18T16:24:16.929Z</updated>
+  <updated>2022-01-02T09:47:05.873Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022 Plan</title>
+    <link href="https://shengwei.innihon.com/post/2022-plan/"/>
+    <id>https://shengwei.innihon.com/post/2022-plan/</id>
+    <published>2022-01-02T08:50:36.000Z</published>
+    <updated>2022-01-02T09:47:05.873Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概括&quot;&gt;&lt;a href=&quot;#概括&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://shengwei.innihon.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="メモ" scheme="https://shengwei.innihon.com/categories/%E7%94%9F%E6%B4%BB/%E3%83%A1%E3%83%A2/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021 Annual Report</title>
+    <link href="https://shengwei.innihon.com/post/2021-annual-report/"/>
+    <id>https://shengwei.innihon.com/post/2021-annual-report/</id>
+    <published>2022-01-02T07:32:56.000Z</published>
+    <updated>2022-01-02T08:50:56.849Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;2021是充满感激的一年&lt;/li&gt;
+&lt;li&gt;2021是充实自己的一年&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://shengwei.innihon.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="メモ" scheme="https://shengwei.innihon.com/categories/%E7%94%9F%E6%B4%BB/%E3%83%A1%E3%83%A2/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Frontend Permissions System</title>
@@ -542,64 +596,6 @@
     <category term="工作经验" scheme="https://shengwei.innihon.com/tags/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/"/>
     
     <category term="less" scheme="https://shengwei.innihon.com/tags/less/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NPM Publish Package (1)</title>
-    <link href="https://shengwei.innihon.com/post/npm-publish-package-1/"/>
-    <id>https://shengwei.innihon.com/post/npm-publish-package-1/</id>
-    <published>2021-02-21T11:11:53.000Z</published>
-    <updated>2021-05-15T03:16:56.632Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;WHAT&quot;&gt;&lt;a href=&quot;#WHAT&quot; class=&quot;headerlink&quot; title=&quot;WHAT&quot;&gt;&lt;/a&gt;WHAT&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="インフラ" scheme="https://shengwei.innihon.com/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/"/>
-    
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
-    
-    <category term="npm" scheme="https://shengwei.innihon.com/tags/npm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Hook useSearchParam</title>
-    <link href="https://shengwei.innihon.com/post/react-hook-usesearchparam/"/>
-    <id>https://shengwei.innihon.com/post/react-hook-usesearchparam/</id>
-    <published>2021-02-18T13:39:47.000Z</published>
-    <updated>2021-05-15T03:16:56.633Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;今天帮同事排查storybook的问题，发现了这个hook&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;优点&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
-    
-    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
     
   </entry>
   

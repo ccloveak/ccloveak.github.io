@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Project Summary (1)</title>
+      <link href="post/project-summary-1/"/>
+      <url>post/project-summary-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><ul><li>记录自己的成长</li><li>反思一下哪里可以做的更好</li><li>总结下经验</li><li>小小的装一下</li></ul><h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><ul><li>一个数据展示项目，主要是用echart</li><li>没有design，全靠自己对项目的理解做页面</li></ul><h2 id="成员"><a href="#成员" class="headerlink" title="成员"></a>成员</h2><ol><li>前端 1个</li><li>后端 1个</li><li>数据 1个</li></ol><h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><ul><li>next</li><li>jwt</li><li>echart api</li></ul><h2 id="经验感受"><a href="#经验感受" class="headerlink" title="经验感受"></a>经验感受</h2><ol><li>不了解后端水平的话，不要轻易定工期，谁定工期谁背锅</li><li>用typescript明确参数类型，后端少传或者没传的话可以有理有据</li><li>项目虽小，不要怕麻烦，颗粒度做到尽可能的细，方便后期修改，加功能</li><li>tailwind next真好用</li><li>我的审美确实不行，需要搭配个美工。。</li><li>坚持自己的观点，不要走野路子，出了问题明确责任。这个主要发生在前后端登陆状态保持这一块。</li><li>这段时间搭了next架构，用了echart相关的api，画面比较简单，没地方用算法，感觉退步了，需要空了刷刷算法。</li><li>基础打得牢，对之后开发有帮助，最直接的帮助是可以省下开发时间。</li><li>需要补一下后端相关知识，我只是知道后端的最佳实践，不明白具体细节，都不能跟后端argue，难受。</li><li>git很重要</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Summary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作经验 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2022 Plan</title>
       <link href="post/2022-plan/"/>
       <url>post/2022-plan/</url>
@@ -19,6 +44,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> Plan </tag>
+            
+        </tags>
       
     </entry>
     
@@ -40,6 +71,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> Report </tag>
+            
+        </tags>
       
     </entry>
     

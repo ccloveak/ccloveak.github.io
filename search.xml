@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Use Mongodb with Docker</title>
+      <link href="post/use-mongodb-with-docker/"/>
+      <url>post/use-mongodb-with-docker/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><a href="https://shengwei.innihon.com/post/start-mongodb-with-docker/">搭建完mongodb</a>后还漏了几个步骤，不能在本地使用</p><h2 id="STEP"><a href="#STEP" class="headerlink" title="STEP"></a>STEP</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 进入容器内部</span>docker <span class="token builtin class-name">exec</span> -it mongo <span class="token function">bash</span><span class="token comment"># 2. 下载vim</span><span class="token function">apt-get</span> update<span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">vim</span><span class="token comment"># 3. 修改配置文件</span><span class="token function">vim</span> /etc/mongod.conf.orig<span class="token comment"># bindIp: 127.0.0.1 -&gt; bindIp: 0.0.0.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Backend </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Mongodb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Frontend Algorithm (1)</title>
       <link href="post/frontend-algorithm-1/"/>
       <url>post/frontend-algorithm-1/</url>

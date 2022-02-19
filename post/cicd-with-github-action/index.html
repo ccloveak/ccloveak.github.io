@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Download Antd Pro Blocks, せいい">
+    <meta name="keywords" content="CICD With Github Action, せいい">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Download Antd Pro Blocks | せいい</title>
+    <title>CICD With Github Action | せいい</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -258,12 +258,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Download Antd Pro Blocks</h1>
+                    <h1 class="description center-align post-title">CICD With Github Action</h1>
                 </div>
             </div>
         </div>
@@ -379,12 +379,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Antd/">
-                                <span class="chip bg-color">Antd</span>
+                            <a href="/tags/AWS/">
+                                <span class="chip bg-color">AWS</span>
                             </a>
                         
-                            <a href="/tags/Ant-Design-Pro/">
-                                <span class="chip bg-color">Ant Design Pro</span>
+                            <a href="/tags/Docker/">
+                                <span class="chip bg-color">Docker</span>
+                            </a>
+                        
+                            <a href="/tags/Github-Action/">
+                                <span class="chip bg-color">Github Action</span>
                             </a>
                         
                     </div>
@@ -395,8 +399,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Frontend/" class="post-category">
-                                Frontend
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/" class="post-category">
+                                インフラ
                             </a>
                         
                     </div>
@@ -408,21 +412,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-12
+                    2022-02-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-06
+                    2022-02-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    74
+                    283
                 </div>
                 
 
@@ -452,18 +456,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ul>
-<li>想查看<a target="_blank" rel="noopener" href="https://preview.pro.ant.design/dashboard/analysis">预览</a>的源代码</li>
-<li>从仓库 clone 下来的是一个最基本的架子</li>
+                <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>test -&gt; build -&gt; deploy</li>
 </ul>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol>
-<li>下载 Ant Design Pro <code>git clone git@github.com:ant-design/ant-design-pro.git</code></li>
-<li><code>yarn install</code></li>
-<li><code>npm run fetch:blocks</code><br><img src="pro-blocks.png"></li>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><ol>
+<li>test： 用react自带的测试框架做单体测试</li>
+<li>build：使用docker构建项目镜像，推送到docker hub</li>
+<li>deploy：在EC2里停止当前容器，拉取最新镜像，重新起一个容器</li>
 </ol>
-<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><ul>
-<li>项目确实有点大(不过问题不大，主要是来看代码的)</li>
-</ul>
+<h2 id="实际开发"><a href="#实际开发" class="headerlink" title="实际开发"></a>实际开发</h2><ol>
+<li>本地开发，本地服务器确认效果</li>
+<li>推送到github，自动部署到服务器</li>
+<li>可以通过公网访问页面</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p><a target="_blank" rel="noopener" href="https://github.com/ccloveak/cicd-demo">github repo</a></p>
+<h2 id="踩坑点"><a href="#踩坑点" class="headerlink" title="踩坑点"></a>踩坑点</h2><ol>
+<li>docker多阶段构建，减小image大小</li>
+<li>docker使用Access Tokens登陆</li>
+<li>github action直接访问EC2</li>
+<li>EC2安装docker</li>
+</ol>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ol>
+<li>在cicd过程中加入e2e测试</li>
+<li>通过AWS SSM进行部署</li>
+</ol>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><ol>
+<li>这些步骤其实之前都接触过，或者都已经写过博客，没有完整走一遍流程不知道自己哪里有欠缺。</li>
+<li>英语是真的重要，一些报错都是根据错误内容来调整的，特别是连接EC2这块。</li>
+<li>单纯前端上docker有点杀鸡用牛刀。不过都上了docker了，集成后端也是不难的。后端再连接云数据库，妥妥的cloud native。</li>
+<li>github action，gitlab pipeline各有千秋吧，面向需求开发。</li>
+</ol>
 
                 
             </div>
@@ -490,7 +512,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shengwei.innihon.com/post/download-pro-antd-demo/">https://shengwei.innihon.com/post/download-pro-antd-demo/</a>
+                    <a href="https://shengwei.innihon.com/post/cicd-with-github-action/">https://shengwei.innihon.com/post/cicd-with-github-action/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -528,12 +550,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Antd/">
-                                    <span class="chip bg-color">Antd</span>
+                                <a href="/tags/AWS/">
+                                    <span class="chip bg-color">AWS</span>
                                 </a>
                             
-                                <a href="/tags/Ant-Design-Pro/">
-                                    <span class="chip bg-color">Ant Design Pro</span>
+                                <a href="/tags/Docker/">
+                                    <span class="chip bg-color">Docker</span>
+                                </a>
+                            
+                                <a href="/tags/Github-Action/">
+                                    <span class="chip bg-color">Github Action</span>
                                 </a>
                             
                         </div>
@@ -577,50 +603,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/create-mock-data/">
+                <a href="/post/cicd-with-github-action/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Create Mock Data">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CICD With Github Action">
                         
-                        <span class="card-title">Create Mock Data</span>
+                        <span class="card-title">CICD With Github Action</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            假数据其乐无穷
+                            一个基本的完整的cicd流程
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Frontend/" class="post-category">
-                                    Frontend
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9/" class="post-category">
+                                    インフラ
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/api/">
-                        <span class="chip bg-color">api</span>
+                    <a href="/tags/AWS/">
+                        <span class="chip bg-color">AWS</span>
                     </a>
                     
-                    <a href="/tags/storybook/">
-                        <span class="chip bg-color">storybook</span>
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/Github-Action/">
+                        <span class="chip bg-color">Github Action</span>
                     </a>
                     
                 </div>
@@ -634,24 +666,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/configure-development-environment-backend/">
+                <a href="/post/use-mongodb-with-docker/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Configure Backend Development Environment">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Use Mongodb with Docker">
                         
-                        <span class="card-title">Configure Backend Development Environment</span>
+                        <span class="card-title">Use Mongodb with Docker</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一个基本的可复用的后端开发环境
+                            开始使用由docker跑起来的mongodb
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-13
                             </span>
                         <span class="publish-author">
                             
@@ -668,8 +700,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Nest/">
-                        <span class="chip bg-color">Nest</span>
+                    <a href="/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/Mongodb/">
+                        <span class="chip bg-color">Mongodb</span>
                     </a>
                     
                 </div>

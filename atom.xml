@@ -6,7 +6,7 @@
   <link href="https://shengwei.innihon.com/atom.xml" rel="self"/>
   
   <link href="https://shengwei.innihon.com/"/>
-  <updated>2022-02-19T15:09:10.564Z</updated>
+  <updated>2022-02-20T00:39:34.641Z</updated>
   <id>https://shengwei.innihon.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Preparation of New Project (1)</title>
+    <link href="https://shengwei.innihon.com/post/preparation-of-new-project-1/"/>
+    <id>https://shengwei.innihon.com/post/preparation-of-new-project-1/</id>
+    <published>2022-02-20T00:24:05.000Z</published>
+    <updated>2022-02-20T00:39:34.641Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;开发环境&quot;&gt;&lt;/a&gt;开发环境&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;vscode&lt;/li&gt;
+&lt;li&gt;node&lt;/li&gt;
+&lt;li&gt;typescript&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="メモ" scheme="https://shengwei.innihon.com/categories/%E3%83%A1%E3%83%A2/"/>
+    
+    
+    <category term="typescript" scheme="https://shengwei.innihon.com/tags/typescript/"/>
+    
+    <category term="VScode" scheme="https://shengwei.innihon.com/tags/VScode/"/>
+    
+  </entry>
   
   <entry>
     <title>CICD With Github Action</title>
@@ -555,36 +587,6 @@
     <category term="playwright" scheme="https://shengwei.innihon.com/tags/playwright/"/>
     
     <category term="typescript" scheme="https://shengwei.innihon.com/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React Hook &#39;useWindowSize&#39;</title>
-    <link href="https://shengwei.innihon.com/post/react-hook-usewindowsize/"/>
-    <id>https://shengwei.innihon.com/post/react-hook-usewindowsize/</id>
-    <published>2021-05-30T08:40:46.000Z</published>
-    <updated>2021-05-30T09:30:38.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;根据页面 size 展示不同的组件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://shengwei.innihon.com/categories/Frontend/"/>
-    
-    
-    <category term="React" scheme="https://shengwei.innihon.com/tags/React/"/>
-    
-    <category term="Hook" scheme="https://shengwei.innihon.com/tags/Hook/"/>
     
   </entry>
   

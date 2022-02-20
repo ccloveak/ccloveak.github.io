@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Preparation of New Project (1)</title>
+      <link href="post/preparation-of-new-project-1/"/>
+      <url>post/preparation-of-new-project-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ol><li>vscode</li><li>node</li><li>typescript</li></ol><h2 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h2><ol><li><code>npm init</code></li><li><code>npm install --save typescript</code></li><li><code>npx tsc --init</code></li></ol><h2 id="导入-ESLint-Prettier"><a href="#导入-ESLint-Prettier" class="headerlink" title="导入 ESLint + Prettier"></a>导入 ESLint + Prettier</h2><ol><li><code>npm install --save-dev eslint</code></li><li><code>npx eslint --init</code></li><li><code>npm install --save-dev prettier eslint-config-prettier</code></li></ol><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// .eslintrc.js</span>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>  <span class="token comment">/* ****** */</span>  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token comment">/* ****** */</span>    <span class="token string">"prettier"</span><span class="token punctuation">,</span> <span class="token comment">//最後に追加する</span>  <span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><ol><li>ESLint(<code>dbaeumer.vscode-eslint</code>)</li><li>Prettier(<code>esbenp.prettier-vscode</code>)</li></ol><h2 id="设定vscode"><a href="#设定vscode" class="headerlink" title="设定vscode"></a>设定vscode</h2><pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token comment">// .vscode/settings.json rootに</span><span class="token punctuation">{</span>  <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"esbenp.prettier-vscode"</span><span class="token punctuation">,</span>   <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><p><a href="https://github.com/ccloveak/ts_project_demo">github repo</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> メモ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> typescript </tag>
+            
+            <tag> VScode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CICD With Github Action</title>
       <link href="post/cicd-with-github-action/"/>
       <url>post/cicd-with-github-action/</url>
